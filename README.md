@@ -2,7 +2,7 @@
 
 [Kiểm tra và giám sát hệ thống](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Quản lý FILE và thư mục](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
+[Quản lý FILE và thư mục]()
 
 [Truyền FILE và sao lưu dữ liệu](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#truy%E1%BB%81n-file-v%C3%A0-sao-l%C6%B0u-d%E1%BB%AF-li%E1%BB%87u)
 
