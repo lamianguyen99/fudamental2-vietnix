@@ -23,7 +23,7 @@
 ## Chẩn đoán và xác định vấn đề mạng
 
 ---
-### Nguồn: [Vietnix](https://vietnix.vn/category/kien-thuc-dich-vu/), [Wikipedia](https://vi.wikipedia.org/wiki/Internet_Protocol), .v.v.... 
+### Nguồn: [Vietnix](https://vietnix.vn/category/linux/), [Wikipedia](https://vi.wikipedia.org/wiki/Linux), .v.v.... 
 
 
 
