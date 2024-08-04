@@ -14,132 +14,79 @@
 
 ## Kiểm tra và giám sát hệ thống
 
-x
+    
+    ping/hping3: Kiểm tra kết nối mạng.
+    
+    netstat: Hiển thị thông tin về các kết nối mạng.
+    
+    ps: Hiển thị thông tin về các tiến trình đang chạy.
+    
+    top: Hiển thị thông tin về các tiến trình đang chạy và mức độ sử dụng tài nguyên.
+    
+    free: Hiển thị thông tin về bộ nhớ.
 
-x
+    df: Hiển thị thông tin về dung lượng ổ đĩa.
 
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
 
 ## Quản lý FILE và thư mục
 
-x
+    cat: Hiển thị nội dung của tệp.
+    
+    echo: In ra văn bản.
+    
+    tail/head: Hiển thị một phần nội dung của tệp.
+   
+    find: Tìm kiếm tệp và thư mục.
+   
+    cp: Sao chép tệp.
+   
+    mv: Di chuyển hoặc đổi tên tệp.
+   
+    rm: Xóa tệp.
+    
+    ls: Liệt kê các tệp và thư mục.
+   
+    chmod, chown, chattr: Thay đổi quyền và thuộc tính của tệp và thư mục.
+    
+    ln: Tạo liên kết (symbolic link và hard link).
 
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
 
 
 ## Truyền FILE và sao lưu dữ liệu
 
-x
 
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
+    ssh: Kết nối và thực hiện lệnh trên máy chủ từ xa.
+    
+    scp: Sao chép tệp giữa máy cục bộ và máy chủ từ xa.
+   
+    rsync: Sao chép và đồng bộ hóa tệp và thư mục.
+   
+    tar, zip, unzip: Nén và giải nén tệp.
+    
+    mount, umount: Gắn và tháo các phân vùng ổ đĩa.
 
 
 ## Xử lý và chỉnh sửa văn bản
 
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
+  
+    sed: Thực hiện các thao tác chỉnh sửa văn bản.
+   
+    sort: Sắp xếp dữ liệu.
+    
+    uniq: Loại bỏ các dòng trùng lặp.
+   
+    wc: Đếm số dòng, từ và ký tự trong văn bản.
+  
+    cut: Trích xuất các cột hoặc trường dữ liệu.
 
 
 ## Chẩn đoán và xác định vấn đề mạng
 
-x
 
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
-
-x
+    ping/hping3: Kiểm tra kết nối mạng.
+    traceroute/tracert: Hiển thị đường đi của gói tin qua các router.
+    dig: Tra cứu thông tin về domain name system (DNS).
+    netstat: Hiển thị thông tin về các kết nối mạng.
 
 
 
