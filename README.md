@@ -2,13 +2,13 @@
 
 [Kiểm tra và giám sát hệ thống](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Quản lý FILE và thư mục](https://github.com/lamianguyen99/fudamental2-vietnix/edit/main/README.md#qu%E1%BA%A3n-l%C3%BD-file-v%C3%A0-th%C6%B0-m%E1%BB%A5c)
+[Quản lý FILE và thư mục](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Truyền FILE và sao lưu dữ liệu](https://github.com/lamianguyen99/fudamental2-vietnix/edit/main/README.md#truy%E1%BB%81n-file-v%C3%A0-sao-l%C6%B0u-d%E1%BB%AF-li%E1%BB%87u)
+[Truyền FILE và sao lưu dữ liệu](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Xử lý và chỉnh sửa văn bản](https://github.com/lamianguyen99/fudamental2-vietnix/edit/main/README.md#x%E1%BB%AD-l%C3%BD-v%C3%A0-ch%E1%BB%89nh-s%E1%BB%ADa-v%C4%83n-b%E1%BA%A3n)
+[Xử lý và chỉnh sửa văn bản](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Chẩn đoán và xác định vấn đề mạng](https://github.com/lamianguyen99/fudamental2-vietnix/edit/main/README.md#x%E1%BB%AD-l%C3%BD-v%C3%A0-ch%E1%BB%89nh-s%E1%BB%ADa-v%C4%83n-b%E1%BA%A3n)
+[Chẩn đoán và xác định vấn đề mạng](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
 ---
 
