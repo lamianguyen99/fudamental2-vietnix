@@ -15,7 +15,7 @@
 ## Kiểm tra và giám sát hệ thống
 
     
-### Ping/hping3: Kiểm tra kết nối mạng.
+### 1. Ping/hping3: Kiểm tra kết nối mạng.
 
 Lệnh `ping vietnix.vn` 
     
@@ -40,7 +40,7 @@ PING vietnix.vn (14.225.253.240) 56(84) bytes of data.
 
 > Tương tự với lệnh `hping3 --icmp vietnix.vn`
 
-### Netstat: Hiển thị thông tin về các kết nối mạng.
+### 2. Netstat: Hiển thị thông tin về các kết nối mạng.
 
 
 
@@ -80,9 +80,9 @@ df: Hiển thị thông tin về dung lượng ổ đĩa.
 ## Truyền FILE và sao lưu dữ liệu
 
 
-### SSH: Kết nối và thực hiện lệnh trên máy chủ từ xa.
+### 1. SSH: Kết nối và thực hiện lệnh trên máy chủ từ xa.
 
-**Lưu ý: Trước khi dùng ssh cần đảm bảo clien-server đều đã mở port 22(ssh)**
+***Lưu ý: Trước khi dùng ssh cần đảm bảo client-server đều đã mở port 22(`SSH`) hoặc port liên quan đên `SSH`***
 
 ***1. Lệnh SSH dùng Password:***
     Cú pháp: `ssh username@remote_host`
@@ -128,9 +128,10 @@ df: Hiển thị thông tin về dung lượng ổ đĩa.
 
 ```
 huydang@huynet-vnx:~/ssh$ sudo ssh-copy-id -i /home/huydang/ssh/id_rsa.pub huynet@192.168.1.9                                                                   /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/huydang/ssh/id_rsa.pub"                                                                    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed                                              /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys                                            
-huynet@192.168.1.9's password:                                                         Number of key(s) added: 1          Now try logging into the machine, with:   `ssh huynet@192.168.1.9` and check to make sure that only the key(s) you wanted were added. ```                                          
+huynet@192.168.1.9's password:                                                         Number of key(s) added: 1          Now try logging into the machine, with:   `ssh huynet@192.168.1.9` and check to make sure that only the key(s) you wanted were added.
+```                                          
 
-    Lệnh này sẽ sao chép public key của bạn (id_rsa.pub) lên tài khoản username trên máy chủ từ xa remote_host. Sau khi thực hiện xong, public key của bạn sẽ được lưu trữ trong file ~/.ssh/authorized_keys trên máy chủ từ xa.
+Lệnh này sẽ sao chép public key của bạn (id_rsa.pub) lên tài khoản username trên máy chủ từ xa remote_host. Sau khi thực hiện xong, public key của bạn sẽ được lưu trữ trong file ~/.ssh/authorized_keys trên máy chủ từ xa.
 
 - Kết nối đến máy chủ từ xa bằng SSH, sử dụng private key:
 
@@ -145,12 +146,65 @@ Last login: Sun Aug  4 21:32:03 2024 from 192.168.1.5
 huynet@haionet:~$ 
 ```
 
-
 Ở đây, tùy chọn -i cho phép bạn chỉ định đường dẫn đến private key (id_rsa) trên máy tính của bạn. SSH sẽ sử dụng private key này để xác thực với máy chủ từ xa, thay vì yêu cầu bạn nhập mật khẩu.
 
 Lưu ý rằng bạn có thể cấu hình SSH để tự động sử dụng private key mặc định (id_rsa) nếu không chỉ định tùy chọn -i. Điều này có thể được thực hiện bằng cách chỉnh sửa file ~/.ssh/config.
 
+***3. Lệnh SSH dùng port custom:***
 
+Cũng giống 2 cách trên, nhưng nếu remote host dùng port khác chẳng han `2222` để cho dịch vụ `SSH` thì ta sẽ cần điều chỉnh port remote như sau
+
+```
+Mở port 2222 và cho phép người khác SSH vào với cổng này, bạn cần thực hiện các bước sau:
+
+    Chỉnh sửa file cấu hình SSH /etc/ssh/sshd_config:
+
+sudo nano /etc/ssh/sshd_config
+
+Tìm dòng chứa Port và thay đổi giá trị từ 22 sang 2222:
+
+Port 2222
+
+Lưu lại và thoát khỏi trình soạn thảo.
+
+    Khởi động lại dịch vụ SSH:
+
+sudo systemctl restart sshd
+
+    Mở cổng 2222 trên firewall:
+
+Tùy thuộc vào loại firewall bạn đang sử dụng, các lệnh để mở port 2222 sẽ khác nhau. Ví dụ với ufw:
+
+sudo ufw allow 2222/tcp
+
+Nếu bạn sử dụng firewalld:
+
+sudo firewall-cmd --permanent --add-port=2222/tcp
+sudo firewall-cmd --reload
+
+```
+
+**Cú pháp:** 
+    
+    `ssh -p 2222 username@remote_host`
+
+or
+    `sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
+    
+**Kết quả:**
+   
+```
+huydang@huynet-vnx:~$ ssh -p 2222  huynet@192.168.1.9
+The authenticity of host '[192.168.1.9]:2222 ([192.168.1.9]:2222)' can't be established.
+ED25519 key fingerprint is SHA256:DuuytTEM/x4tcn61S2B2tj3/+P0mj/aTzyl34DstiE4.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[192.168.1.9]:2222' (ED25519) to the list of known hosts.
+huynet@192.168.1.9's password: 
+Last login: Sun Aug  4 22:04:57 2024 from 192.168.1.5
+
+```
+   
     
 scp: Sao chép tệp giữa máy cục bộ và máy chủ từ xa.
    
