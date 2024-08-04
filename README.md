@@ -16,6 +16,8 @@
 
     
     ping/hping3: Kiểm tra kết nối mạng.
+
+    
     
     netstat: Hiển thị thông tin về các kết nối mạng.
     
