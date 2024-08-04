@@ -189,6 +189,7 @@ sudo firewall-cmd --reload
     `ssh -p 2222 username@remote_host`
 
 or
+
     `sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
     
 **Kết quả:**
