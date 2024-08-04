@@ -6,7 +6,7 @@
 
 [Truyền FILE và sao lưu dữ liệu](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
 
-[Xử lý và chỉnh sửa văn bản](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ki%E1%BB%83m-tra-v%C3%A0-gi%C3%A1m-s%C3%A1t-h%E1%BB%87-th%E1%BB%91ng)
+[Xử lý và chỉnh sửa văn bản](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#x%E1%BB%AD-l%C3%BD-v%C3%A0-ch%E1%BB%89nh-s%E1%BB%ADa-v%C4%83n-b%E1%BA%A3n)
 
 [Chẩn đoán và xác định vấn đề mạng](https://github.com/lamianguyen99/fudamental2-vietnix?tab=readme-ov-file#ch%E1%BA%A9n-%C4%91o%C3%A1n-v%C3%A0-x%C3%A1c-%C4%91%E1%BB%8Bnh-v%E1%BA%A5n-%C4%91%E1%BB%81-m%E1%BA%A1ng)
 
