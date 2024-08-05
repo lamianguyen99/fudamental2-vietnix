@@ -32,18 +32,18 @@ PING vietnix.vn (14.225.253.240) 56(84) bytes of data.
 
 **Giải thích:**
     
-`seq=2`: Số thứ tự của gói tin ICMP trong trường hợp này đây là gói tin thứ 2 trong chuỗi.
+- `seq=2`: Số thứ tự của gói tin ICMP trong trường hợp này đây là gói tin thứ 2 trong chuỗi.
 
-`ttl=53`: TTL(Time to live) là một giá trị được sử dụng để kiểm soát số lần một gói tin ***ICMP echo request*** có thể được chuyển tiếp (Forward) trước khi bị loại bỏ. Giá trị 53 Cho thấy gói tin đã đi qua 53 router trước khi đến được đích.
+- `ttl=53`: TTL(Time to live) là một giá trị được sử dụng để kiểm soát số lần một gói tin ***ICMP echo request*** có thể được chuyển tiếp (Forward) trước khi bị loại bỏ. Giá trị 53 Cho thấy gói tin đã đi qua 53 router trước khi đến được đích.
 
-`time=3.78 ms`: Đây là thời gian phản hồi, tức là thời gian gói tin ***ICMP echo reply*** đi từ máy tính nhận trở về. Trong TH này thời gian phản hồi là 3.78 ms.
+- `time=3.78 ms`: Đây là thời gian phản hồi, tức là thời gian gói tin ***ICMP echo reply*** đi từ máy tính nhận trở về. Trong TH này thời gian phản hồi là 3.78 ms.
 
 > Tương tự với lệnh `hping3 --icmp vietnix.vn`
 
 ### 2. Netstat: Hiển thị thông tin về các kết nối mạng.
 
 
-Lệnh netstat (Network Statistics) là một công cụ hữu ích để hiển thị thông tin về các kết nối mạng, các socket đang lắng nghe, và các hoạt động mạng khác trên hệ thống. Dưới đây là các tùy chọn để hiển thị các socket đang lắng nghe với các yêu cầu cụ thể:
+- Lệnh netstat (Network Statistics) là một công cụ hữu ích để hiển thị thông tin về các kết nối mạng, các socket đang lắng nghe, và các hoạt động mạng khác trên hệ thống. Dưới đây là các tùy chọn để hiển thị các socket đang lắng nghe với các yêu cầu cụ thể:
 
 **Hiển thị các socket đang lắng nghe:**
 
@@ -170,12 +170,15 @@ Kết hợp các tùy chọn trên, lệnh netstat để hiển thị các socke
 
 `netstat -lntp`
 
-Này sẽ hiển thị:
+**Này sẽ hiển thị:**
 
-    Các socket đang lắng nghe (-l)
-    Không phân giải tên host và port (-n)
-    Hiển thị tên/PID của tiến trình (-p)
-    Chỉ hiển thị các socket TCP (-t)
+- Các socket đang lắng nghe (-l)
+
+- Không phân giải tên host và port (-n)
+
+- Hiển thị tên/PID của tiến trình (-p)
+
+- Chỉ hiển thị các socket TCP (-t)
 
 Kết quả sẽ bao gồm các thông tin như địa chỉ local, địa chỉ remote, trạng thái kết nối, và PID/tên tiến trình sở hữu các socket đang lắng nghe.
 
@@ -183,7 +186,7 @@ Kết quả sẽ bao gồm các thông tin như địa chỉ local, địa chỉ
 ### 3. ps: Hiển thị thông tin về các tiến trình đang chạy.
 
 
-ps (process status) là lệnh dùng để hiển thị thông tin về các tiến trình đang chạy trong hệ thống Unix/Linux.
+`ps` (process status) là lệnh dùng để hiển thị thông tin về các tiến trình đang chạy trong hệ thống Unix/Linux.
 
 **Hiển thị danh sách tiến trình:**
 
@@ -240,8 +243,6 @@ Nếu tiến trình không dừng được, bạn có thể sử dụng tín hi�
 
 Ví dụ:
 
-apache
-
 ```
 $ ps
   PID TTY          TIME CMD
@@ -294,27 +295,27 @@ Trong ví dụ trên, chúng ta có thể thấy rằng CPU đang hoạt động
 
 **Giải thích về các thông số quan trọng:**
 
-Load average: Đây là số trung bình của các công việc (tasks) đang chờ xử lý hoặc đang chạy trong 1, 5 và 15 phút gần đây. Số càng cao thì hệ thống càng bận.
+- **Load average:** Đây là số trung bình của các công việc (tasks) đang chờ xử lý hoặc đang chạy trong 1, 5 và 15 phút gần đây. Số càng cao thì hệ thống càng bận.
 
-**us (user):** Thời gian CPU dành cho các tiến trình người dùng.
+- **us (user):** Thời gian CPU dành cho các tiến trình người dùng.
         
-**sy (system):** Thời gian CPU dành cho các tiến trình hệ thống.
+- **sy (system):** Thời gian CPU dành cho các tiến trình hệ thống.
         
-**ni (nice):** Thời gian CPU dành cho các tiến trình có độ ưu tiên "nice".
+- **ni (nice):** Thời gian CPU dành cho các tiến trình có độ ưu tiên "nice".
         
-**id (idle):** Thời gian CPU không làm gì (nhàn rỗi).
+- **id (idle):** Thời gian CPU không làm gì (nhàn rỗi).
         
-**wa (wait):** Thời gian CPU phải đợi I/O.
+- **wa (wait):** Thời gian CPU phải đợi I/O.
         
-**hi (hardware interrupt):** Thời gian CPU xử lý các ngắt phần cứng.
+- **hi (hardware interrupt):** Thời gian CPU xử lý các ngắt phần cứng.
         
-**si (software interrupt):** Thời gian CPU xử lý các ngắt phần mềm.
+- **si (software interrupt):** Thời gian CPU xử lý các ngắt phần mềm.
         
-**st (stolen time):** Thời gian CPU bị ảo hóa (virtual machines) chiếm dụng.
+- **st (stolen time):** Thời gian CPU bị ảo hóa (virtual machines) chiếm dụng.
 
-**Zombie process:** Là các tiến trình đã kết thúc nhưng vẫn còn trong bảng quản lý tiến trình. Chúng cần phải được "dọn dẹp" bởi các tiến trình cha.
+- **Zombie process:** Là các tiến trình đã kết thúc nhưng vẫn còn trong bảng quản lý tiến trình. Chúng cần phải được "dọn dẹp" bởi các tiến trình cha.
 
-**Sleeping process:** Là các tiến trình đang chờ một sự kiện nào đó (I/O, tín hiệu, v.v.) trước khi tiếp tục chạy.
+- **Sleeping process:** Là các tiến trình đang chờ một sự kiện nào đó (I/O, tín hiệu, v.v.) trước khi tiếp tục chạy.
 
 
 ### 5. free: Hiển thị thông tin về bộ nhớ.
@@ -323,21 +324,19 @@ Load average: Đây là số trung bình của các công việc (tasks) đang c
 
 Khi chạy lệnh free, bạn sẽ thấy một bảng thông tin với các cột sau:
 
-**total:** Tổng dung lượng bộ nhớ RAM có sẵn trên hệ thống.
+- **total:** Tổng dung lượng bộ nhớ RAM có sẵn trên hệ thống.
 
-**used:** Bộ nhớ RAM đã được sử dụng.
+- **used:** Bộ nhớ RAM đã được sử dụng.
 
-**free:** Bộ nhớ RAM còn trống.
+- **free:** Bộ nhớ RAM còn trống.
 
-**shared:** Bộ nhớ RAM dùng chung.
+- **shared:** Bộ nhớ RAM dùng chung.
 
-**buff/cache:** Bộ nhớ RAM dành cho cache và buffers.
+- **buff/cache:** Bộ nhớ RAM dành cho cache và buffers.
 
-**available:** Bộ nhớ RAM có thể sử dụng ngay lập tức (không tính cache và buffers).
+- **available:** Bộ nhớ RAM có thể sử dụng ngay lập tức (không tính cache và buffers).
 
 Ví dụ kết quả của lệnh free:
-
-**OUPUT:**
 
 ```
               total        used        free      shared  buff/cache   available
@@ -347,17 +346,17 @@ Swap:       2097148            0     2097148
 
 Trong ví dụ này:
 
-**total:** Tổng dung lượng RAM là 8GB.
+- **total:** Tổng dung lượng RAM là 8GB.
 
-**used:** 1.6GB RAM đang được sử dụng.
+- **used:** 1.6GB RAM đang được sử dụng.
 
-**free:** 771MB RAM còn trống.
+- **free:** 771MB RAM còn trống.
 
-**shared:** 69MB RAM dùng chung.
+- **shared:** 69MB RAM dùng chung.
 
-**buff/cache:** 5.7GB RAM dành cho cache và buffers.
+- **buff/cache:** 5.7GB RAM dành cho cache và buffers.
 
-**available:** 5.3GB RAM có thể sử dụng ngay lập tức.
+- **available:** 5.3GB RAM có thể sử dụng ngay lập tức.
 
 
 ### 6. df: Hiển thị thông tin về dung lượng ổ đĩa.
@@ -366,17 +365,17 @@ Trong ví dụ này:
 
 Khi chạy lệnh `df`, bạn sẽ thấy một bảng thông tin với các cột sau:
 
-**Filesystem:** Tên của hệ thống tệp tin.
+- **Filesystem:** Tên của hệ thống tệp tin.
 
-**Size:** Tổng dung lượng của hệ thống tệp tin.
+- **Size:** Tổng dung lượng của hệ thống tệp tin.
 
-**Used:** Dung lượng đã sử dụng của hệ thống tệp tin.
+- **Used:** Dung lượng đã sử dụng của hệ thống tệp tin.
 
-**Avail:** Dung lượng còn trống của hệ thống tệp tin.
+- **Avail:** Dung lượng còn trống của hệ thống tệp tin.
 
-**Use%:** Phần trăm dung lượng đã sử dụng của hệ thống tệp tin.
+- **Use%:** Phần trăm dung lượng đã sử dụng của hệ thống tệp tin.
 
-**Mounted on:** Vị trí (mount point) của hệ thống tệp tin trên hệ thống.
+- **Mounted on:** Vị trí (mount point) của hệ thống tệp tin trên hệ thống.
 
 Ví dụ kết quả của lệnh df:
 
@@ -388,15 +387,15 @@ tmpfs         3.9G  188M  3.7G   5% /run
 ```
 
 
-Trong ví dụ này:
+**Trong ví dụ này:**
 
-**/dev/sda1** là phân vùng chứa hệ thống tệp tin / (root) với dung lượng 100GB, đã sử dụng 50GB và còn trống 45GB.
+- **/dev/sda1** là phân vùng chứa hệ thống tệp tin / (root) với dung lượng 100GB, đã sử dụng 50GB và còn trống 45GB.
 
-**tmpfs** là một hệ thống tệp tin tạm thời (in-memory) dùng để lưu trữ các tập tin tạm thời, với dung lượng 3.9GB và đang sử dụng 188MB.
+- **tmpfs** là một hệ thống tệp tin tạm thời (in-memory) dùng để lưu trữ các tập tin tạm thời, với dung lượng 3.9GB và đang sử dụng 188MB.
 
-**/dev/sda2** là phân vùng chứa hệ thống tệp tin /home với dung lượng 500GB, đã sử dụng 460GB và còn trống 15GB.
+- **/dev/sda2** là phân vùng chứa hệ thống tệp tin /home với dung lượng 500GB, đã sử dụng 460GB và còn trống 15GB.
 
-Phân vùng / (root) là phân vùng chứa hệ thống tệp tin chính của hệ thống Linux. 
+- **Phân vùng /** (root) là phân vùng chứa hệ thống tệp tin chính của hệ thống Linux. 
 
 Đây là phân vùng quan trọng nhất, chứa tất cả các tệp tin cần thiết cho việc khởi động và vận hành hệ thống. Nó thường được đặt trên ổ cứng chính (primary disk) và là phân vùng mặc định khi cài đặt Linux.
 
@@ -414,7 +413,7 @@ Lệnh `cat` trong Linux/Unix được sử dụng để:
    cat file.txt
    ```
    
-   Lệnh này sẽ in ra toàn bộ nội dung của file `file.txt`.
+Lệnh này sẽ in ra toàn bộ nội dung của file `file.txt`.
 
 2. **Hiển thị dòng thứ `n` trong file**:
    
@@ -422,7 +421,7 @@ Lệnh `cat` trong Linux/Unix được sử dụng để:
    cat -n file.txt | head -n 5
    ```
    
-   Lệnh này sẽ in ra số thứ tự của các dòng cùng với nội dung, và chỉ hiển thị 5 dòng đầu tiên.
+Lệnh này sẽ in ra số thứ tự của các dòng cùng với nội dung, và chỉ hiển thị 5 dòng đầu tiên.
 
 3. **Ghi nhiều dòng vào một file bằng cách sử dụng `EOF` (End Of File)**:
 
@@ -445,13 +444,11 @@ huydangdd
 
 ```
 
-
-
-  ** Lưu ý:**
+** Lưu ý:**
    
-   - `cat > new_file.txt` mở file `new_file.txt` ở chế độ ghi (write mode).
+- `cat > new_file.txt` mở file `new_file.txt` ở chế độ ghi (write mode).
      
-   - `<< EOF` và `EOF` là các chuỗi bắt đầu và kết thúc việc nhập dữ liệu vào file.
+- `<< EOF` và `EOF` là các chuỗi bắt đầu và kết thúc việc nhập dữ liệu vào file.
 
 Các tùy chọn thường dùng của lệnh `cat`:
 
@@ -487,9 +484,9 @@ Dòng mới
 
 Lệnh này sẽ thêm dòng "Dòng mới" vào cuối file `file.txt`. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
-   Lưu ý:
+**Lưu ý:**
    
-   - Sử dụng `>>` để thêm dữ liệu vào cuối file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
+- Sử dụng `>>` để thêm dữ liệu vào cuối file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
 1. **Ghi (overwrite) nội dung của file:**
  
@@ -506,14 +503,14 @@ Nội dung mới
 
 Lệnh này sẽ ghi đè toàn bộ nội dung của file `file.txt` bằng chuỗi "Nội dung mới". Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
-  **Lưu ý:**
+**Lưu ý:**
    
-   - Sử dụng `>` để ghi đè nội dung file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
+- Sử dụng `>` để ghi đè nội dung file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
-Một vài tùy chọn thường dùng của lệnh `echo`:
+***Một vài tùy chọn thường dùng của lệnh `echo`:***
 
 - `-n`: Không in dấu newline (xuống dòng) ở cuối.
-- 
+  
 - `-e`: Cho phép sử dụng các ký tự đặc biệt như `\n` (newline), `\t` (tab), v.v.
 
 Ngoài ra, lệnh `echo` cũng có thể được sử dụng để in ra các biến môi trường hoặc kết hợp với các lệnh khác như `sed`, `awk`, v.v. để thực hiện các tác vụ xử lý file nâng cao hơn.
@@ -526,23 +523,23 @@ Lệnh `tail` và `head` trong Linux/Unix được sử dụng để hiển th�
 
 1. **Lệnh `tail`:**
    
-   - `tail file.txt`: Hiển thị 10 dòng cuối cùng của file `file.txt`.
+- `tail file.txt`: Hiển thị 10 dòng cuối cùng của file `file.txt`.
      
-   - `tail -n 5 file.txt`: Hiển thị 5 dòng cuối cùng của file `file.txt`.
+- `tail -n 5 file.txt`: Hiển thị 5 dòng cuối cùng của file `file.txt`.
      
-   - `tail -f file.txt`: Theo dõi (follow) và hiển thị dòng mới được thêm vào cuối file `file.txt` (thường dùng để xem log files).
+- `tail -f file.txt`: Theo dõi (follow) và hiển thị dòng mới được thêm vào cuối file `file.txt` (thường dùng để xem log files).
 
 2. **Lệnh `head`:**
    
-   - `head file.txt`: Hiển thị 10 dòng đầu tiên của file `file.txt`.
+- `head file.txt`: Hiển thị 10 dòng đầu tiên của file `file.txt`.
      
-   - `head -n 5 file.txt`: Hiển thị 5 dòng đầu tiên của file `file.txt`.
+- `head -n 5 file.txt`: Hiển thị 5 dòng đầu tiên của file `file.txt`.
 
 3. **Sự khác biệt giữa `tail` và `tailf`:**
    
-   - `tail file.txt`: Hiển thị 10 dòng cuối cùng của file và sau đó dừng.
+- `tail file.txt`: Hiển thị 10 dòng cuối cùng của file và sau đó dừng.
      
-   - `tailf file.txt`: Tương tự như `tail -f file.txt`, theo dõi và hiển thị các dòng mới được thêm vào cuối file.
+- `tailf file.txt`: Tương tự như `tail -f file.txt`, theo dõi và hiển thị các dòng mới được thêm vào cuối file.
 
 Một vài tùy chọn thường dùng của `tail` và `head`:
 
@@ -624,9 +621,9 @@ Một số tùy chọn khác của lệnh cp bao gồm:
     -f: Ghi đè file đích mà không cần xác nhận
 ```
 
-Ví dụ:
+**Ví dụ:**
 
-cp -i file1.txt file2.txt
+`cp -i file1.txt file2.txt`
 
 Lệnh này sẽ sao chép file1.txt thành file2.txt và hỏi trước khi ghi đè nếu file2.txt đã tồn tại.
 
@@ -670,7 +667,8 @@ Lệnh này sẽ đổi tên thư mục từ old_foldername thành new_foldernam
     -v: Hiển thị thông tin về quá trình di chuyển
     -f: Ghi đè file đích mà không cần xác nhận
 ```
-Ví dụ:
+
+**Ví dụ:**
 
 `mv -i file1.txt file2.txt`
 
@@ -695,7 +693,7 @@ Một số options thường dùng của lệnh rm:
     -f (force): Xóa mà không cần xác nhận, bỏ qua các lỗi.
     -v (verbose): Hiển thị thông báo về các tệp tin đang bị xóa.
 
-Ví dụ:
+***Ví dụ:***
 
 **Xóa một tệp tin:**
 
@@ -715,9 +713,11 @@ Ví dụ:
 
 ***Lưu ý:***
 
-    Khi sử dụng lệnh rm, bạn cần rất cẩn thận vì các tệp tin/thư mục bị xóa sẽ không thể khôi phục.
-    Có thể sử dụng lệnh rm -i để yêu cầu xác nhận trước khi xóa từng tệp tin/thư mục.
-    Lệnh rmdir có thể dùng để xóa các thư mục trống.
+- Khi sử dụng lệnh rm, bạn cần rất cẩn thận vì các tệp tin/thư mục bị xóa sẽ không thể khôi phục.
+
+- Có thể sử dụng lệnh rm -i để yêu cầu xác nhận trước khi xóa từng tệp tin/thư mục.
+
+- Lệnh rmdir có thể dùng để xóa các thư mục trống.
 
 Lệnh `rm` là một công cụ mạnh mẽ nhưng cũng rất nguy hiểm nếu sử dụng không cẩn thận, do đó cần sử dụng với sự thận trọng.
 
@@ -759,18 +759,23 @@ Lệnh này sẽ liệt kê tất cả các file và thư mục, bao gồm cả 
     ls -t: Sắp xếp kết quả theo thời gian sửa đổi mới nhất.
     ls -S: Sắp xếp kết quả theo kích thước file lớn nhất.
 
-Ví dụ:
+**Ví dụ:**
 
+```
 $ ls
 file1.txt  file2.txt  directory1/
-
+```
+```
 $ ls -l
 -rw-r--r-- 1 user1 user1 100 Aug 5 2023 file1.txt
 -rw-r--r-- 1 user1 user1 200 Aug 5 2023 file2.txt
 drwxr-xr-x 2 user1 user1 4096 Aug 5 2023 directory1/
+```
 
+```
 $ ls -a
 .  ..  .hidden_file  file1.txt  file2.txt  directory1/
+```
 
 Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thông tin file/thư mục theo cách mong muốn.
 
@@ -780,11 +785,12 @@ Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thôn
 **Phân quyền User/Group trong Unix/Linux sử dụng các lệnh sau:**
 
 `chmod`: Thay đổi quyền truy cập của file/thư mục.
-        Phân quyền bằng số:
+
+**Phân quyền bằng số:**
 
 `chmod 755 file.txt`
 
-Giải thích:
+**Giải thích:**
 
     7 (rwx) cho chủ sở hữu
     5 (r-x) cho group
@@ -794,7 +800,8 @@ Giải thích:
 
     chmod u+x,g+rw,o+r file.txt
 
-    Giải thích:
+**Giải thích:**
+
         u (user): Chủ sở hữu
         g (group): Nhóm
         o (others): Người dùng khác
@@ -803,8 +810,10 @@ Giải thích:
 
 `chown`: Thay đổi chủ sở hữu (user) và nhóm (group) của file/thư mục.
 
-`chown user:group file.txt`
-`chown -R user:group directory/`
+```
+chown user:group file.txt
+chown -R user:group directory/
+```
 
 `chattr:` Thay đổi các thuộc tính đặc biệt của file/thư mục.
 
@@ -816,7 +825,7 @@ Giải thích:
 
 `chattr -i file.txt`
 
-Một số thuộc tính khác của chattr:
+***Một số thuộc tính khác của chattr:***
 
     a: Chỉ cho phép thêm dữ liệu vào file (append-only)
     c: File sẽ được nén tự động khi ghi
@@ -847,31 +856,31 @@ Lệnh trên tạo một symbolic link /path/to/symlink trỏ đến file/thư m
 
 **Ví dụ:**
 
-        ln /path/to/target /path/to/hardlink
+`ln /path/to/target /path/to/hardlink`
 
 Lệnh trên tạo một hard link /path/to/hardlink trỏ đến cùng inode như /path/to/target.
 
 Sự khác biệt giữa Symbolic Links và Hard Links:
 
-    Symbolic Links:
+- **Symbolic Links:**
         Là một file đặc biệt, chứa một đường dẫn tới file/thư mục đích.
         Khi truy cập symlink, hệ thống sẽ tự động điều hướng đến file/thư mục đích.
         Có thể trỏ đến file/thư mục không tồn tại.
         Khi file/thư mục đích bị xóa, symlink vẫn tồn tại nhưng không trỏ đến đâu.
 
-    Hard Links:
+- **Hard Links:**
         Là một entry trong file system trỏ trực tiếp đến inode của file.
         Các hard link trỏ đến cùng một nội dung file.
         Không thể tạo hard link cho thư mục.
         Khi file gốc bị xóa, các hard link vẫn tồn tại và truy cập được nội dung file.
 
-Ví dụ:
+**Ví dụ:**
 
-# Tạo symbolic link
+**Tạo symbolic link**
 
 `ln -s /path/to/target /path/to/symlink`
 
-# Tạo hard link 
+**Tạo hard link**
 
 `ln /path/to/target /path/to/hardlink`
 
@@ -904,7 +913,7 @@ Symbolic links và hard links đều có ứng dụng riêng, tuỳ thuộc vào
 
 Để thực hiện việc này, bạn cần thực hiện các bước sau:
 
-- Tạo cặp SSH key (public key và private key) trên máy tính của bạn:
+**- Tạo cặp SSH key (public key và private key) trên máy tính của bạn:**
 
     `ssh-keygen -t rsa -b 4096`
 
@@ -913,15 +922,15 @@ Symbolic links và hard links đều có ứng dụng riêng, tuỳ thuộc vào
 ![keygenSSH](https://github.com/user-attachments/assets/d1b3d535-0227-433e-9359-6d04d00d3ec9)
 
 
-   Lệnh này sẽ tạo ra một cặp key RSA 4096-bit, được lưu trữ mặc định trong thư mục ~/.ssh/ với tên là id_rsa (private key) và id_rsa.pub (public key).
+Lệnh này sẽ tạo ra một cặp key RSA 4096-bit, được lưu trữ mặc định trong thư mục ~/.ssh/ với tên là id_rsa (private key) và id_rsa.pub (public key).
 
-- Sao chép public key lên máy chủ từ xa:
+**- Sao chép public key lên máy chủ từ xa:**
 
-    `ssh-copy-id username@remote_host`
+`ssh-copy-id username@remote_host`
 
-    or
+or
 
-    `ssh-copy-id -i ~/PATH/id_rsa.pub username@remote_host`
+`ssh-copy-id -i ~/PATH/id_rsa.pub username@remote_host`
 
 **Thực hiện:**
 
@@ -932,9 +941,9 @@ huynet@192.168.1.9's password:                                                  
 
 Lệnh này sẽ sao chép public key của bạn (id_rsa.pub) lên tài khoản username trên máy chủ từ xa remote_host. Sau khi thực hiện xong, public key của bạn sẽ được lưu trữ trong file ~/.ssh/authorized_keys trên máy chủ từ xa.
 
-- Kết nối đến máy chủ từ xa bằng SSH, sử dụng private key:
+**- Kết nối đến máy chủ từ xa bằng SSH, sử dụng private key:**
 
-    `ssh -i ~/.ssh/id_rsa username@remote_host`
+`ssh -i ~/.ssh/id_rsa username@remote_host`
 
 **Kết quả:**
    
@@ -953,31 +962,33 @@ Lưu ý rằng bạn có thể cấu hình SSH để tự động sử dụng pr
 
 Cũng giống 2 cách trên, nhưng nếu remote host dùng port khác chẳng han `2222` để cho dịch vụ `SSH` thì ta sẽ cần điều chỉnh port remote như sau
 
-```
-Mở port 2222 và cho phép người khác SSH vào với cổng này, bạn cần thực hiện các bước sau:
 
-    Chỉnh sửa file cấu hình SSH /etc/ssh/sshd_config:
+- *Mở port 2222 và cho phép người khác SSH vào với cổng này, bạn cần thực hiện các bước sau:*
 
-sudo nano /etc/ssh/sshd_config
+**Chỉnh sửa file cấu hình SSH /etc/ssh/sshd_config:**
 
-Tìm dòng chứa Port và thay đổi giá trị từ 22 sang 2222:
+`sudo nano /etc/ssh/sshd_config`
 
-Port 2222
+**Tìm dòng chứa Port và thay đổi giá trị từ 22 sang 2222:**
 
-Lưu lại và thoát khỏi trình soạn thảo.
+`Port 2222`
 
-    Khởi động lại dịch vụ SSH:
+Lưu lại và thoát khỏi trình soạn thảo
 
-sudo systemctl restart sshd
+**Khởi động lại dịch vụ SSH:**
 
-    Mở cổng 2222 trên firewall:
+`sudo systemctl restart sshd`
+
+
+***- Mở cổng 2222 trên firewall:***
 
 Tùy thuộc vào loại firewall bạn đang sử dụng, các lệnh để mở port 2222 sẽ khác nhau. Ví dụ với ufw:
 
-sudo ufw allow 2222/tcp
+`sudo ufw allow 2222/tcp`
 
-Nếu bạn sử dụng firewalld:
+**Nếu bạn sử dụng firewalld:**
 
+```
 sudo firewall-cmd --permanent --add-port=2222/tcp
 sudo firewall-cmd --reload
 
@@ -985,11 +996,11 @@ sudo firewall-cmd --reload
 
 **Cú pháp:** 
     
-    `ssh -p 2222 username@remote_host`
+`ssh -p 2222 username@remote_host`
 
 or
 
-    `sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
+`sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
     
 **Kết quả:**
    
@@ -1036,9 +1047,11 @@ Ví dụ:
 ```
 scp -r my_folder user@remote_host:/home/user/backup
 ```
+
 Lệnh này sẽ sao chép thư mục `my_folder` (và toàn bộ nội dung bên trong) từ máy hiện tại đến thư mục `/home/user/backup` trên máy `remote_host`.
 
-Lưu ý:
+*Lưu ý:*
+
 - Bạn cần phải có quyền truy cập SSH vào máy chủ từ xa.
 
 - Sử dụng `-r` để sao chép thư mục, không cần này khi sao chép file.
@@ -1111,52 +1124,62 @@ Trong Linux/Unix, có 3 lệnh phổ biến dùng để nén và giải nén fil
 
 1. **tar** (Tape ARchive):
    
-   - Nén file/thư mục vào file `.tar.gz` (Gzip compressed tar archive):
+   **- Nén file/thư mục vào file `.tar.gz` (Gzip compressed tar archive):**
+     
      ```
      tar -czf output_file.tar.gz input_file_or_directory
      ```
-     Ví dụ:
+     
+   **Ví dụ:**
+     
      ```
      tar -czf my_files.tar.gz documents/ photos/
      ```
-   - Giải nén file `.tar.gz`:
+     
+   **- Giải nén file `.tar.gz`:**
+     
      ```
      tar -xzf input_file.tar.gz
      ```
-     Ví dụ: 
+     
+     **Ví dụ:**
+
      ```
      tar -xzf my_files.tar.gz
      ```
 
 2. **zip**:
-   - Nén file/thư mục vào file `.zip`:
+   **- Nén file/thư mục vào file `.zip`:**
+
      ```
      zip -r output_file.zip input_file_or_directory
      ```
-     Ví dụ:
+
+     **Ví dụ:**
+
      ```
      zip -r my_files.zip documents/ photos/
      ```
-   - Giải nén file `.zip`:
+
+   **- Giải nén file `.zip`:**
+
      ```
      unzip input_file.zip
      ```
-     Ví dụ:
+
+    **Ví dụ:**
+
      ```
      unzip my_files.zip
      ```
 
 ***Các tùy chọn thường dùng:***
 
-- `-c`: Tạo archive mới
-  
-- `-z`: Sử dụng Gzip compression
-  
-- `-x`: Extract (giải nén) archive
-  
-- `-r`: Nén/giải nén thư mục (recursive)
-  
-- `-f`: Chỉ định tên file archive
+    `-c`: Tạo archive mới
+    `-z`: Sử dụng Gzip compression
+    `-x`: Extract (giải nén) archive
+    `-r`: Nén/giải nén thư mục (recursive)  
+    `-f`: Chỉ định tên file archive
 
 **Ưu điểm của `tar.gz` so với `.zip`:**
 
@@ -1382,7 +1405,7 @@ Lệnh `cut` trong Unix/Linux được sử dụng để trích xuất các ph�
 
 **Trích xuất kí tự thứ n trong một chuỗi:**
 
-c`ut -c n file.txt`
+`cut -c n file.txt`
 
 Lệnh này sẽ trích xuất kí tự thứ n từ mỗi dòng trong file file.txt.
 
@@ -1414,15 +1437,15 @@ Lệnh cut rất hữu ích khi cần trích xuất thông tin cụ thể từ c
 
 Lệnh `traceroute` (hoặc tracert trên Windows) là một công cụ hữu ích để xác định đường đi của gói tin từ máy tính nguồn đến một địa chỉ IP hoặc tên miền đích. Nó cung cấp thông tin chi tiết về các bước trung gian (hop) mà gói tin phải trải qua trên đường đến đích.
 
-**Khi chạy lệnh traceroute, kết quả trả về sẽ bao gồm các thông tin sau:**
+- **Khi chạy lệnh traceroute, kết quả trả về sẽ bao gồm các thông tin sau:**
 
-**Hop Number:** Thứ tự của các bước trung gian (hop) mà gói tin phải trải qua.
+- **Hop Number:** Thứ tự của các bước trung gian (hop) mà gói tin phải trải qua.
 
-**Router IP Address:** Địa chỉ IP của mỗi router trung gian.
+- **Router IP Address:** Địa chỉ IP của mỗi router trung gian.
 
-**Response Time:** Thời gian (tính bằng milli giây) mà gói tin cần để đến và trở về từ mỗi hop.
+- **Response Time:** Thời gian (tính bằng milli giây) mà gói tin cần để đến và trở về từ mỗi hop.
 
-**Host Name (nếu có):** Tên miền của mỗi router trung gian, nếu có thể phân giải được.
+- **Host Name (nếu có):** Tên miền của mỗi router trung gian, nếu có thể phân giải được.
 
 **Ví dụ kết quả traceroute:**
 
