@@ -1490,7 +1490,6 @@ dig -f domains.txt
 
 Lệnh `dig` là một công cụ rất hữu ích để kiểm tra và debug các vấn đề liên quan đến DNS.
 
-
 ---
 ### Nguồn: [Vietnix](https://vietnix.vn/category/linux/), [Wikipedia](https://vi.wikipedia.org/wiki/Linux), .v.v.... 
 
