@@ -142,7 +142,7 @@ unix  3      [ ]         STREAM     CONNECTED     14400    -                    
 **OUPUT:**
 
 ```
-huynet@huynet-vnx:~$ netstat -t
+huynet@haionnet:~$ netstat -t
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State      
 tcp        0      0 192.168.0.132:40914     91.108.56.121:https     ESTABLISHED
@@ -159,7 +159,7 @@ tcp        0      0 192.168.0.132:34662     93.243.107.34.bc.:https ESTABLISHED
 **OUPUT:**
 
 ```
-huynet@huynet-vnx:~$ netstat -u
+huynet@haionnet:~$ netstat -u
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State      
 udp        0      0 192.168.0.132:bootpc    192.168.0.1:bootps      ESTABLISHED
@@ -192,7 +192,7 @@ ps (process status) là lệnh dùng để hiển thị thông tin về các ti�
 **OUPUT:**
 
 ```
-huynet@huynet-vnx:~$ ps
+huynet@haionnet:~$ ps
     PID TTY          TIME CMD
    9850 pts/0    00:00:00 bash
   10563 pts/0    00:00:00 ps
@@ -337,6 +337,8 @@ Khi chạy lệnh free, bạn sẽ thấy một bảng thông tin với các c�
 
 Ví dụ kết quả của lệnh free:
 
+**OUPUT:**
+
 ```
               total        used        free      shared  buff/cache   available
 Mem:        8124908     1615028      771748       69624     5738132     5323436
@@ -425,16 +427,27 @@ Lệnh `cat` trong Linux/Unix được sử dụng để:
 3. **Ghi nhiều dòng vào một file bằng cách sử dụng `EOF` (End Of File)**:
 
     ```
-    huynet@huynet-vnx:~$ cat > newfile.txt << EOF
+    huynet@haionnet:~$ cat > newfile.txt << EOF
     > huydang
     > danghuy
     > huydangdd
     > EOF
     ```
-   
-   Lệnh này sẽ tạo một file mới có tên `new_file.txt` và ghi ba dòng văn bản vào file đó. Người dùng sẽ nhấn `Ctrl+D` để kết thúc việc nhập dữ liệu vào file.
+Lệnh này sẽ tạo một file mới có tên `new_file.txt` và ghi ba dòng văn bản vào file đó. Người dùng sẽ nhấn `Ctrl+D` để kết thúc việc nhập dữ liệu vào file.
 
-   Lưu ý:
+**CHECK:**
+
+```
+huynet@haionet:~$ cat newfile.txt 
+huydang
+danghuy
+huydangdd
+
+```
+
+
+
+  ** Lưu ý:**
    
    - `cat > new_file.txt` mở file `new_file.txt` ở chế độ ghi (write mode).
      
@@ -458,25 +471,42 @@ Lệnh `echo` trong Linux/Unix được sử dụng để in một chuỗi văn 
 
 1. **Chèn thêm một dòng vào cuối file:**
 
-   ```
-   echo "Dòng mới" >> file.txt
-   ```
-   
-   Lệnh này sẽ thêm dòng "Dòng mới" vào cuối file `file.txt`. Nếu file không tồn tại, nó sẽ tạo ra file mới.
+```
+echo "Dòng mới" >> newfile.txt
+```
+
+**CHECK:**
+
+```
+huynet@haionet:~$ cat newfile.txt 
+huydang
+danghuy
+huydangdd
+Dòng mới
+```
+
+Lệnh này sẽ thêm dòng "Dòng mới" vào cuối file `file.txt`. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
    Lưu ý:
    
    - Sử dụng `>>` để thêm dữ liệu vào cuối file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
-2. **Ghi (overwrite) nội dung của file:**
+1. **Ghi (overwrite) nội dung của file:**
  
-   ```
-   echo "Nội dung mới" > file.txt
-   ```
-   
-   Lệnh này sẽ ghi đè toàn bộ nội dung của file `file.txt` bằng chuỗi "Nội dung mới". Nếu file không tồn tại, nó sẽ tạo ra file mới.
+```
+echo "Nội dung mới" > file.txt
+```
 
-   Lưu ý:
+**CHECK:**
+
+```
+huynet@haionet:~$ cat newfile.txt 
+Nội dung mới
+```
+
+Lệnh này sẽ ghi đè toàn bộ nội dung của file `file.txt` bằng chuỗi "Nội dung mới". Nếu file không tồn tại, nó sẽ tạo ra file mới.
+
+  **Lưu ý:**
    
    - Sử dụng `>` để ghi đè nội dung file. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
@@ -896,7 +926,7 @@ Symbolic links và hard links đều có ứng dụng riêng, tuỳ thuộc vào
 **Thực hiện:**
 
 ```
-huydang@huynet-vnx:~/ssh$ sudo ssh-copy-id -i /home/huydang/ssh/id_rsa.pub huynet@192.168.1.9                                                                   /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/huydang/ssh/id_rsa.pub"                                                                    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed                                              /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys                                            
+huydang@haionnet:~/ssh$ sudo ssh-copy-id -i /home/huydang/ssh/id_rsa.pub huynet@192.168.1.9                                                                   /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/huydang/ssh/id_rsa.pub"                                                                    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed                                              /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys                                            
 huynet@192.168.1.9's password:                                                         Number of key(s) added: 1          Now try logging into the machine, with:   `ssh huynet@192.168.1.9` and check to make sure that only the key(s) you wanted were added.
 ```                                          
 
@@ -964,7 +994,7 @@ or
 **Kết quả:**
    
 ```
-huydang@huynet-vnx:~$ ssh -p 2222  huynet@192.168.1.9
+huydang@haionnet:~$ ssh -p 2222  huynet@192.168.1.9
 The authenticity of host '[192.168.1.9]:2222 ([192.168.1.9]:2222)' can't be established.
 ED25519 key fingerprint is SHA256:DuuytTEM/x4tcn61S2B2tj3/+P0mj/aTzyl34DstiE4.
 This key is not known by any other names.
