@@ -43,7 +43,7 @@ Lệnh `ping vietnix.vn`
 ### 2. Netstat: Hiển thị thông tin về các kết nối mạng.
 
 
-- Lệnh netstat (Network Statistics) là một công cụ hữu ích để hiển thị thông tin về các kết nối mạng, các socket đang lắng nghe, và các hoạt động mạng khác trên hệ thống. Dưới đây là các tùy chọn để hiển thị các socket đang lắng nghe với các yêu cầu cụ thể:
+- Lệnh `netstat` (Network Statistics) là một công cụ hữu ích để hiển thị thông tin về các kết nối mạng, các socket đang lắng nghe, và các hoạt động mạng khác trên hệ thống. Dưới đây là các tùy chọn để hiển thị các socket đang lắng nghe với các yêu cầu cụ thể:
 
 **Hiển thị các socket đang lắng nghe:**
 
@@ -201,7 +201,33 @@ huynet@haionnet:~$ ps
   10563 pts/0    00:00:00 ps
 ```
 
-Lệnh này sẽ hiển thị danh sách các tiến trình thuộc về user hiện tại, bao gồm PID (process ID), TTY (terminal liên kết), TIME (thời gian chạy) và COMMAND (lệnh khởi chạy tiến trình).
+Lệnh này sẽ hiển thị danh sách các tiến trình thuộc về user hiện tại, bao gồm:
+
+**PID (process ID):** Hiển thị Process ID của tiến trình đang chạy. 
+
+**TTY (terminal liên kết):** Chỉ ra Terminal nào đang chạy tiến trình cụ thể
+
+- `pts/0, pts/1, pts/2`: Terminal ảo (Pseudo-terminals hoặc Pseudo Teletypes). Thường được sử dụng bởi  các ứng dụng như SSH, screen, tmux,v.v.v
+
+- `tty1, tty2, tty3, etc.`: Đây là các terminal vật lý, như các cửa sổ terminal trên giao diện đồ họa(GUI) hoặc các terminal ảo chạy trong chế độ văn bản.
+  
+- `?`: Khi TTY hiển thị là "?", điều này có nghĩa là tiến trình không được liên kết với bất kỳ terminal nào, chẵng hạn các tiến trình chạy quyền root hoăc các tiến trình chạy nền.
+
+**TIME (thời gian chạy)**
+
+- Cột TIME hiển thị tổng thời gian CPU đã được sử dụng bởi tiến trình.
+
+- Thời gian CPU chỉ tính thời gian mà tiến trình thực sự đang sử dụng CPU, không tính thời gian chờ đợi
+
+  
+
+**COMMAND (lệnh khởi chạy tiến trình)**
+
+- Cột CMD hiển thị tên lệnh  hoặc đường dẫn đầy đủ của lệnh khởi chạy tiến trình.
+
+- Đây là tên của chương trình hoặc lệnh mà tiến trình đang chạy.
+
+
 
 **Hiển thị chi tiết thông tin tiến trình:**
 
