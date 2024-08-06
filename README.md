@@ -1083,7 +1083,15 @@ huynet@192.168.1.9's password:
 Last login: Sun Aug  4 22:04:57 2024 from 192.168.1.5
 
 ```
-   
+
+**Log SSH:** 
+
+- tail -f /var/log/auth.log
+
+- tail -f /var/log/syslog 
+
+- sudo journalctl -u ssh
+
     
 ### 2. scp: Sao chép tệp giữa máy cục bộ và máy chủ từ xa.
 
