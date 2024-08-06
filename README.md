@@ -69,7 +69,7 @@ Lệnh `ping vietnix.vn`
 
 **Không phân giải tên host:**
 
-    `netstat -n`
+    `netstat --numeric-hosts`
 
 **OUPUT:**
 
@@ -91,7 +91,7 @@ Lệnh `ping vietnix.vn`
 
 **Không phân giải tên port:**
 
-    `netstat -n`
+    `netstat --numeric-ports`
 
 **OUPUT:**
 
