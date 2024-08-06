@@ -40,6 +40,10 @@ Lệnh `ping vietnix.vn`
 
 > Tương tự với lệnh `hping3 --icmp vietnix.vn`
 
+`ping -c 10  8.8.8.8`: ping theo gói.
+
+
+
 ### 2. Netstat: Hiển thị thông tin về các kết nối mạng.
 
 
@@ -231,28 +235,56 @@ Lệnh này sẽ hiển thị danh sách các tiến trình thuộc về user hi
 
 **Hiển thị chi tiết thông tin tiến trình:**
 
-`ps -ef`
+`ps -ef` : Hiển thị tất cả command cho từng process.
     
 **OUPUT:**
 
 ```
+~$ ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
-root           1       0  0 08:20 ?        00:00:01 /sbin/init splash
-root           2       0  0 08:20 ?        00:00:00 [kthreadd]
-root           3       2  0 08:20 ?        00:00:00 [pool_workqueue_release]
-...
-huynet     10516   10487  1 08:44 ?        00:00:01 /usr/bin/xed /home/huynet/Do
-root       10634       2  0 08:46 ?        00:00:00 [kworker/3:0]
-root       10640       2  0 08:46 ?        00:00:00 [kworker/u8:1]
-huynet     10659    9850 99 08:47 pts/0    00:00:00 ps -ef
+root           1       0  1 09:31 ?        00:00:01 /sbin/init splash
+root           2       0  0 09:31 ?        00:00:00 [kthreadd]
+root           3       2  0 09:31 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 09:31 ?        00:00:00 [kworker/R-rcu_g]
 
 ```
 
+
 Lệnh này sẽ hiển thị thông tin chi tiết về tất cả các tiến trình đang chạy, bao gồm: PID, PPID (parent process ID), USER, %CPU, %MEM, VSZ (virtual memory size), RSS (resident set size) và COMMAND.
+
+**Một số tùy chọn khác của lệnh ps:**
+
+
+`ps aux`: Hiển thị tất cả các tiến trình của tất cả các user.
+
+`ps -eo pid,user,comm`: Hiển thị PID, user và command.
+
+`ps -eo pid,user,%cpu,%mem,cmd`: Hiển thị PID, user, CPU usage, memory usage và command.
+
+`ps --quick-pid 2323`: Hiển thị 1 process được chỉ định.
+
+`ps -u huynet | grep firefox`: Hiển thị ps của một user 
+
+
+
 
 **Kill (dừng) một tiến trình:**
 
+
 `kill [PID]`
+
+**Các trạng thái của một process:**
+
+- Running
+
+- Waiting(wait for an event or system resoure)
+
+- Stopped
+
+- Zombie(stop but still has an entry in the process table)
+
+  
+
 
 Lệnh này sẽ dừng tiến trình với PID tương ứng. Mặc định, lệnh kill sẽ gửi tín hiệu "TERM" (15) để yêu cầu tiến trình tự dừng.
 
@@ -260,11 +292,6 @@ Nếu tiến trình không dừng được, bạn có thể sử dụng tín hi�
 
 `kill -9 [PID]`
 
-**Một số tùy chọn khác của lệnh ps:**
-
-    ps aux: Hiển thị tất cả các tiến trình của tất cả các user.
-    ps -eo pid,user,comm: Hiển thị PID, user và command.
-    ps -eo pid,user,%cpu,%mem,comm: Hiển thị PID, user, CPU usage, memory usage và command.
 
 Ví dụ:
 
