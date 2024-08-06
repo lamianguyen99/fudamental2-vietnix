@@ -47,128 +47,128 @@ Lệnh `ping vietnix.vn`
 
 **Hiển thị các socket đang lắng nghe:**
 
-    `netstat -l`
+`netstat -l`
 
 **OUPUT:**
 
-    ```
-    Active Internet connections (only servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-    tcp        0      0 _localdnsstub:domain    0.0.0.0:*               LISTEN     
-    tcp        0      0 _localdnsproxy:domain   0.0.0.0:*               LISTEN
-    ...
-    ...
-    Active UNIX domain sockets (only servers)
-    Proto RefCnt Flags       Type       State         I-Node   Path
-    unix  2      [ ACC ]     STREAM     LISTENING     13095    /tmp/.ICE-unix/1856
-    unix  2      [ ACC ]     STREAM     LISTENING     11417    /tmp/.X11-unix/X0
-    unix  2      [ ACC ]     STREAM     LISTENING     6490     /run/systemd io.systemd.sysext
-    ...
-    ...
-    ```
+```
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 _localdnsstub:domain    0.0.0.0:*               LISTEN     
+tcp        0      0 _localdnsproxy:domain   0.0.0.0:*               LISTEN
+...
+...
+Active UNIX domain sockets (only servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     13095    /tmp/.ICE-unix/1856
+unix  2      [ ACC ]     STREAM     LISTENING     11417    /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     6490     /run/systemd io.systemd.sysext
+...
+...
+```
 
 **Không phân giải tên host:**
 
-    `netstat --numeric-hosts`
+`netstat --numeric-hosts`
 
 **OUPUT:**
 
-    ```
-    Active Internet connections (w/o servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-    tcp        0      0 192.168.0.132:40914     91.108.56.121:443       ESTABLISHED
-    tcp        0      0 192.168.0.132:41122     52.70.125.53:443        ESTABLISHED
-    ...
-    ...
-    Active UNIX domain sockets (w/o servers)
-    Proto RefCnt Flags       Type       State         I-Node   Path
-    unix  3      [ ]         SEQPACKET  CONNECTED     157174   
-    unix  3      [ ]         STREAM     CONNECTED     15430    
-    unix  3      [ ]         STREAM     CONNECTED     14400    /run/systemd/journal/stdout
-    ...
-    ...
-    ```
+```
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.0.132:40914     91.108.56.121:443       ESTABLISHED
+tcp        0      0 192.168.0.132:41122     52.70.125.53:443        ESTABLISHED
+...
+...
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         SEQPACKET  CONNECTED     157174   
+unix  3      [ ]         STREAM     CONNECTED     15430    
+unix  3      [ ]         STREAM     CONNECTED     14400    /run/systemd/journal/stdout
+...
+...
+```
 
 **Không phân giải tên port:**
 
-    `netstat --numeric-ports`
+`netstat --numeric-ports`
 
 **OUPUT:**
 
-    ```
-    Active Internet connections (w/o servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-    tcp        0      0 192.168.0.132:40914     91.108.56.121:443       ESTABLISHED
-    tcp        0      0 192.168.0.132:41122     52.70.125.53:443        ESTABLISHED
-    ...
-    ...
-    Active UNIX domain sockets (w/o servers)
-    Proto RefCnt Flags       Type       State         I-Node   Path
-    unix  3      [ ]         SEQPACKET  CONNECTED     157174   
-    unix  3      [ ]         STREAM     CONNECTED     15430    
-    unix  3      [ ]         STREAM     CONNECTED     14400    /run/systemd/journal/stdout
-    ...
-    ...
-    ```
+```
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.0.132:40914     91.108.56.121:443       ESTABLISHED
+tcp        0      0 192.168.0.132:41122     52.70.125.53:443        ESTABLISHED
+...
+...
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  3      [ ]         SEQPACKET  CONNECTED     157174   
+unix  3      [ ]         STREAM     CONNECTED     15430    
+unix  3      [ ]         STREAM     CONNECTED     14400    /run/systemd/journal/stdout
+...
+...
+```
 
 **Hiển thị tên/PID của tiến trình:**
 
-    `netstat -p`
+`netstat -p`
 
 **OUPUT:**
 
-    ```
-    \(Not all processes could be identified, non-owned process info
-     will not be shown, you would have to be root to see it all.)
-    Active Internet connections (w/o servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-    tcp        0      0 192.168.0.132:40914     91.108.56.121:https     ESTABLISHED 8908/telegram-deskt 
-    tcp        0      0 192.168.0.132:41122     ec2-52-70-125-53.:https ESTABLISHED 2503/firefox        
-    ...
-    ...
-    Active UNIX domain sockets (w/o servers)
-    Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
-    unix  3      [ ]         SEQPACKET  CONNECTED     157174   8637/firefox-bin     
-    unix  3      [ ]         STREAM     CONNECTED     15430    2221/xapp-sn-watche  
-    unix  3      [ ]         STREAM     CONNECTED     14400    -                    /run/systemd/journal/stdout
-    ...
-    ...
-    ```
+```
+\(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 192.168.0.132:40914     91.108.56.121:https     ESTABLISHED 8908/telegram-deskt 
+tcp        0      0 192.168.0.132:41122     ec2-52-70-125-53.:https ESTABLISHED 2503/firefox        
+...
+...
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Path
+unix  3      [ ]         SEQPACKET  CONNECTED     157174   8637/firefox-bin     
+unix  3      [ ]         STREAM     CONNECTED     15430    2221/xapp-sn-watche  
+unix  3      [ ]         STREAM     CONNECTED     14400    -                    /run/systemd/journal/stdout
+...
+...
+```
 
 **Chỉ hiển thị các socket TCP:**
 
-    `netstat -t`
+`netstat -t`
 
 **OUPUT:**
 
-    ```
-    huynet@haionnet:~$ netstat -t
-    Active Internet connections (w/o servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-    tcp        0      0 192.168.0.132:40914     91.108.56.121:https     ESTABLISHED
-    tcp        0      0 192.168.0.132:41122     ec2-52-70-125-53.:https ESTABLISHED
-    tcp        0      0 192.168.0.132:34662     93.243.107.34.bc.:https ESTABLISHED
-    ...
-    ...
-    ```
+```
+huynet@haionnet:~$ netstat -t
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 192.168.0.132:40914     91.108.56.121:https     ESTABLISHED
+tcp        0      0 192.168.0.132:41122     ec2-52-70-125-53.:https ESTABLISHED
+tcp        0      0 192.168.0.132:34662     93.243.107.34.bc.:https ESTABLISHED
+...
+...
+```
 
 **Chỉ hiển thị các socket UDP:**
 
-    `netstat -u`
+`netstat -u`
 
 **OUPUT:**
 
-    ```
-    huynet@haionnet:~$ netstat -u
-    Active Internet connections (w/o servers)
-    Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-    udp        0      0 192.168.0.132:bootpc    192.168.0.1:bootps      ESTABLISHED
-    
-    ```
+```
+huynet@haionnet:~$ netstat -u
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+udp        0      0 192.168.0.132:bootpc    192.168.0.1:bootps      ESTABLISHED
+
+```
 
 Kết hợp các tùy chọn trên, lệnh netstat để hiển thị các socket đang lắng ngửa với các yêu cầu cụ thể sẽ như sau:
 
-    `netstat -lntp`
+`netstat -lntp`
 
 **Này sẽ hiển thị:**
 
@@ -190,49 +190,49 @@ Kết quả sẽ bao gồm các thông tin như địa chỉ local, địa chỉ
 
 **Hiển thị danh sách tiến trình:**
 
-    `ps`
+`ps`
 
 **OUPUT:**
 
-    ```
-    huynet@haionnet:~$ ps
-        PID TTY          TIME CMD
-       9850 pts/0    00:00:00 bash
-      10563 pts/0    00:00:00 ps
-    ```
+```
+huynet@haionnet:~$ ps
+    PID TTY          TIME CMD
+   9850 pts/0    00:00:00 bash
+  10563 pts/0    00:00:00 ps
+```
 
 Lệnh này sẽ hiển thị danh sách các tiến trình thuộc về user hiện tại, bao gồm PID (process ID), TTY (terminal liên kết), TIME (thời gian chạy) và COMMAND (lệnh khởi chạy tiến trình).
 
 **Hiển thị chi tiết thông tin tiến trình:**
 
-    `ps -ef`
+`ps -ef`
     
 **OUPUT:**
 
-    ```
-    UID          PID    PPID  C STIME TTY          TIME CMD
-    root           1       0  0 08:20 ?        00:00:01 /sbin/init splash
-    root           2       0  0 08:20 ?        00:00:00 [kthreadd]
-    root           3       2  0 08:20 ?        00:00:00 [pool_workqueue_release]
-    ...
-    huynet     10516   10487  1 08:44 ?        00:00:01 /usr/bin/xed /home/huynet/Do
-    root       10634       2  0 08:46 ?        00:00:00 [kworker/3:0]
-    root       10640       2  0 08:46 ?        00:00:00 [kworker/u8:1]
-    huynet     10659    9850 99 08:47 pts/0    00:00:00 ps -ef
-    
-    ```
+```
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 08:20 ?        00:00:01 /sbin/init splash
+root           2       0  0 08:20 ?        00:00:00 [kthreadd]
+root           3       2  0 08:20 ?        00:00:00 [pool_workqueue_release]
+...
+huynet     10516   10487  1 08:44 ?        00:00:01 /usr/bin/xed /home/huynet/Do
+root       10634       2  0 08:46 ?        00:00:00 [kworker/3:0]
+root       10640       2  0 08:46 ?        00:00:00 [kworker/u8:1]
+huynet     10659    9850 99 08:47 pts/0    00:00:00 ps -ef
+
+```
 
 Lệnh này sẽ hiển thị thông tin chi tiết về tất cả các tiến trình đang chạy, bao gồm: PID, PPID (parent process ID), USER, %CPU, %MEM, VSZ (virtual memory size), RSS (resident set size) và COMMAND.
 
 **Kill (dừng) một tiến trình:**
 
-    `kill [PID]`
+`kill [PID]`
 
 Lệnh này sẽ dừng tiến trình với PID tương ứng. Mặc định, lệnh kill sẽ gửi tín hiệu "TERM" (15) để yêu cầu tiến trình tự dừng.
 
 Nếu tiến trình không dừng được, bạn có thể sử dụng tín hiệu "KILL" (9) mạnh mẽ hơn:
 
-    kill -9 [PID]
+`kill -9 [PID]`
 
 **Một số tùy chọn khác của lệnh ps:**
 
@@ -242,26 +242,26 @@ Nếu tiến trình không dừng được, bạn có thể sử dụng tín hi�
 
 Ví dụ:
 
-    ```
-    $ ps
-      PID TTY          TIME CMD
-     1234 pts/0    00:00:05 bash
-     5678 pts/0    00:00:01 python
-     9012 pts/0    00:00:02 node
-    ```
+```
+$ ps
+  PID TTY          TIME CMD
+ 1234 pts/0    00:00:05 bash
+ 5678 pts/0    00:00:01 python
+ 9012 pts/0    00:00:02 node
+```
 
-    ```
-    $ ps -ef
-    UID        PID  PPID  C STIME TTY          TIME CMD
-    user1     1234  4321  0 10:30 pts/0    00:00:05 /bin/bash
-    user1     5678  1234  0 10:32 pts/0    00:00:01 /usr/bin/python3 app.py
-    user1     9012  1234  0 10:33 pts/0    00:00:02 /usr/bin/node server.js
-    ```
+```
+$ ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+user1     1234  4321  0 10:30 pts/0    00:00:05 /bin/bash
+user1     5678  1234  0 10:32 pts/0    00:00:01 /usr/bin/python3 app.py
+user1     9012  1234  0 10:33 pts/0    00:00:02 /usr/bin/node server.js
+```
 
-    ```
-    $ kill 5678
-    $ kill -9 9012
-    ```
+```
+$ kill 5678
+$ kill -9 9012
+```
 
 
 ### 4. top: Hiển thị thông tin về các tiến trình đang chạy và mức độ sử dụng tài nguyên.
@@ -275,19 +275,19 @@ Khi chạy lệnh top, bạn sẽ thấy một bảng thông tin về các tiế
 
 **RUN:**
 
-    ```
-    $ top
-    top - 14:32:55 up 2 days, 12:34,  2 users,  load average: 0.15, 0.20, 0.18
-    Tasks: 254 total,   1 running, 253 sleeping,   0 stopped,   0 zombie
-    %Cpu(s):  3.3 us,  1.1 sy,  0.0 ni, 95.5 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
-    KiB Mem :  8124908 total,   771748 free,  1615028 used,  5738132 buff/cache
-    KiB Swap:  2097148 total,  2097148 free,        0 used.  5323436 avail Mem
-    
-      PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
-      424 root      20   0  159208  11716   8444 S   3.3  0.1   0:01.22 systemd-journal
-      465 root      20   0  268616  13572   9156 S   2.0  0.2   0:02.91 systemd-network
-     1096 user1     20   0   41420   3460   3048 S   1.7  0.0   0:00.14 sshd
-    ```
+```
+$ top
+top - 14:32:55 up 2 days, 12:34,  2 users,  load average: 0.15, 0.20, 0.18
+Tasks: 254 total,   1 running, 253 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.3 us,  1.1 sy,  0.0 ni, 95.5 id,  0.1 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  8124908 total,   771748 free,  1615028 used,  5738132 buff/cache
+KiB Swap:  2097148 total,  2097148 free,        0 used.  5323436 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+  424 root      20   0  159208  11716   8444 S   3.3  0.1   0:01.22 systemd-journal
+  465 root      20   0  268616  13572   9156 S   2.0  0.2   0:02.91 systemd-network
+ 1096 user1     20   0   41420   3460   3048 S   1.7  0.0   0:00.14 sshd
+```
 
 Trong ví dụ trên, chúng ta có thể thấy rằng CPU đang hoạt động ở mức rất nhàn nhã (95.5% idle) và không có tiến trình zombie. Các tiến trình đang sử dụng nhiều CPU nhất là systemd-journal (3.3%) và systemd-network (2.0%).
 
@@ -337,11 +337,11 @@ Khi chạy lệnh free, bạn sẽ thấy một bảng thông tin với các c�
 
 Ví dụ kết quả của lệnh free:
 
-    ```
-                  total        used        free      shared  buff/cache   available
-    Mem:        8124908     1615028      771748       69624     5738132     5323436
-    Swap:       2097148            0     2097148
-    ```
+```
+              total        used        free      shared  buff/cache   available
+Mem:        8124908     1615028      771748       69624     5738132     5323436
+Swap:       2097148            0     2097148
+```
 
 Trong ví dụ này:
 
@@ -378,12 +378,12 @@ Khi chạy lệnh `df`, bạn sẽ thấy một bảng thông tin với các c�
 
 Ví dụ kết quả của lệnh df:
 
-    ```
-    Filesystem     Size  Used Avail Use% Mounted on
-    /dev/sda1      100G   50G   45G  55% /
-    tmpfs         3.9G  188M  3.7G   5% /run
-    /dev/sda2      500G  460G   15G  95% /home
-    ```
+```
+Filesystem     Size  Used Avail Use% Mounted on
+/dev/sda1      100G   50G   45G  55% /
+tmpfs         3.9G  188M  3.7G   5% /run
+/dev/sda2      500G  460G   15G  95% /home
+```
 
 
 **Trong ví dụ này:**
@@ -408,39 +408,39 @@ Lệnh `cat` trong Linux/Unix được sử dụng để:
 
 1. **Hiển thị nội dung của một file**:
    
-   ```
-   cat file.txt
-   ```
-   
+```
+cat file.txt
+```
+
 Lệnh này sẽ in ra toàn bộ nội dung của file `file.txt`.
 
 2. **Hiển thị dòng thứ `n` trong file**:
    
-   ```
-   cat -n file.txt | head -n 5
-   ```
+```
+cat -n file.txt | head -n 5
+```
    
 Lệnh này sẽ in ra số thứ tự của các dòng cùng với nội dung, và chỉ hiển thị 5 dòng đầu tiên.
 
 3. **Ghi nhiều dòng vào một file bằng cách sử dụng `EOF` (End Of File)**:
 
-    ```
-    huynet@haionnet:~$ cat > newfile.txt << EOF
-    > huydang
-    > danghuy
-    > huydangdd
-    > EOF
-    ```
+```
+huynet@haionnet:~$ cat > newfile.txt << EOF
+> huydang
+> danghuy
+> huydangdd
+> EOF
+```
 Lệnh này sẽ tạo một file mới có tên `new_file.txt` và ghi ba dòng văn bản vào file đó. Người dùng sẽ nhấn `Ctrl+D` để kết thúc việc nhập dữ liệu vào file.
 
 **CHECK:**
     
-    ```
-    huynet@haionet:~$ cat newfile.txt 
-    huydang
-    danghuy
-    huydangdd
-    ```
+```
+huynet@haionet:~$ cat newfile.txt 
+huydang
+danghuy
+huydangdd
+```
 
 **Lưu ý:**
    
@@ -466,19 +466,19 @@ Lệnh `echo` trong Linux/Unix được sử dụng để in một chuỗi văn 
 
 1. **Chèn thêm một dòng vào cuối file:**
 
-    ```
-    echo "Dòng mới" >> newfile.txt
-    ```
+```
+echo "Dòng mới" >> newfile.txt
+```
 
 **CHECK:**
 
-    ```
-    huynet@haionet:~$ cat newfile.txt 
-    huydang
-    danghuy
-    huydangdd
-    Dòng mới
-    ```
+```
+huynet@haionet:~$ cat newfile.txt 
+huydang
+danghuy
+huydangdd
+Dòng mới
+```
 
 Lệnh này sẽ thêm dòng "Dòng mới" vào cuối file `file.txt`. Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
@@ -488,16 +488,16 @@ Lệnh này sẽ thêm dòng "Dòng mới" vào cuối file `file.txt`. Nếu fi
 
 1. **Ghi (overwrite) nội dung của file:**
  
-    ```
-    echo "Nội dung mới" > file.txt
-    ```
+```
+echo "Nội dung mới" > file.txt
+```
 
 **CHECK:**
 
-    ```
-    huynet@haionet:~$ cat newfile.txt 
-    Nội dung mới
-    ```
+```
+huynet@haionet:~$ cat newfile.txt 
+Nội dung mới
+```
 
 Lệnh này sẽ ghi đè toàn bộ nội dung của file `file.txt` bằng chuỗi "Nội dung mới". Nếu file không tồn tại, nó sẽ tạo ra file mới.
 
@@ -557,36 +557,36 @@ Lệnh `find` trong Unix/Linux được sử dụng để tìm kiếm các file 
 
 **Tìm các file có đuôi .log:**
 
-    `find . -type f -name "*.log"`
+`find . -type f -name "*.log"`
 
 Lệnh này sẽ tìm các file (không phải thư mục) có tên kết thúc bằng .log trong thư mục hiện tại (và các thư mục con).
 
 **Tìm các thư mục có tên abc:**
 
-    `find . -type d -name "abc"`
+`find . -type d -name "abc"`
 
 Lệnh này sẽ tìm các thư mục có tên chính xác là abc trong thư mục hiện tại (và các thư mục con).
 
 **Tìm các file có tên abc:**
 
-    `find . -type f -name "abc"`
+`find . -type f -name "abc"`
 
 Lệnh này sẽ tìm các file (không phải thư mục) có tên chính xác là abc trong thư mục hiện tại (và các thư mục con).
 
 **Tìm các file có tên abc và đặt chế độ read-only:**
 
-    `find . -type f -name "abc" -exec chmod 444 {} \;`
+`find . -type f -name "abc" -exec chmod 444 {} \;`
 
 Lệnh này sẽ tìm các file (không phải thư mục) có tên chính xác là abc trong thư mục hiện tại (và các thư mục con), sau đó đặt chế độ read-only (444) cho những file đó.
 
 **Một số tùy chọn khác của lệnh find bao gồm:**
 
 ```
-    -type [f|d]: Tìm file (f) hoặc thư mục (d)
-    -name "[pattern]": Tìm theo tên file/thư mục khớp với mẫu
-    -iname "[pattern]": Tìm theo tên file/thư mục khớp với mẫu, không phân biệt chữ hoa/chữ thường
-    -size [+|-]N[c|k|M|G]: Tìm file có kích thước lớn hơn (+), nhỏ hơn (-) hoặc bằng N byte, kilobyte, megabyte, gigabyte
-    -mtime [+|-]N: Tìm file được sửa đổi cách đây N ngày
+-type [f|d]: Tìm file (f) hoặc thư mục (d)
+-name "[pattern]": Tìm theo tên file/thư mục khớp với mẫu
+-iname "[pattern]": Tìm theo tên file/thư mục khớp với mẫu, không phân biệt chữ hoa/chữ thường
+-size [+|-]N[c|k|M|G]: Tìm file có kích thước lớn hơn (+), nhỏ hơn (-) hoặc bằng N byte, kilobyte, megabyte, gigabyte
+-mtime [+|-]N: Tìm file được sửa đổi cách đây N ngày
 ```
 
 Lệnh find rất mạnh mẽ và có thể được sử dụng để thực hiện nhiều tác vụ khác nhau trên các file và thư mục.
@@ -599,29 +599,29 @@ Lệnh cp trong Unix/Linux được sử dụng để sao chép file hoặc thư
 
 **Sao chép file:**
 
-    `cp source_file.txt destination_file.txt`
+`cp source_file.txt destination_file.txt`
 
 Lệnh này sẽ sao chép file source_file.txt thành destination_file.txt trong cùng thư mục.
 
 **Sao chép thư mục:**
 
-    `cp -r source_folder destination_folder`
+`cp -r source_folder destination_folder`
 
 Lệnh này sẽ sao chép thư mục source_folder (và tất cả nội dung bên trong) thành destination_folder. Tùy chọn -r (recursive) cho phép sao chép thư mục và toàn bộ nội dung bên trong.
 
 **Một số tùy chọn khác của lệnh cp bao gồm:**
 
 ```
-    -i: Hỏi trước khi ghi đè file đích
-    -v: Hiển thị thông tin về quá trình sao chép
-    -p: Giữ nguyên các thuộc tính của file (chủ sở hữu, quyền, thời gian chỉnh sửa, v.v.)
-    -u: Chỉ sao chép khi file đích cũ hơn file nguồn
-    -f: Ghi đè file đích mà không cần xác nhận
+-i: Hỏi trước khi ghi đè file đích
+-v: Hiển thị thông tin về quá trình sao chép
+-p: Giữ nguyên các thuộc tính của file (chủ sở hữu, quyền, thời gian chỉnh sửa, v.v.)
+-u: Chỉ sao chép khi file đích cũ hơn file nguồn
+-f: Ghi đè file đích mà không cần xác nhận
 ```
 
 **Ví dụ:**
 
-    `cp -i file1.txt file2.txt`
+`cp -i file1.txt file2.txt`
 
 Lệnh này sẽ sao chép file1.txt thành file2.txt và hỏi trước khi ghi đè nếu file2.txt đã tồn tại.
 
@@ -636,39 +636,39 @@ Lệnh `mv` trong Unix/Linux được sử dụng để di chuyển hoặc đổ
 
 **Di chuyển file:**
 
-    `mv source_file.txt destination_folder/`
+`mv source_file.txt destination_folder/`
 
 Lệnh này sẽ di chuyển file source_file.txt đến thư mục destination_folder.
 
 **Di chuyển thư mục:**
 
-    `mv source_folder/ destination_folder/`
+`mv source_folder/ destination_folder/`
 
 Lệnh này sẽ di chuyển thư mục source_folder đến thư mục destination_folder.
 
 **Đổi tên file:**
 
-    `mv old_filename.txt new_filename.txt`
+`mv old_filename.txt new_filename.txt`
 
 Lệnh này sẽ đổi tên file từ old_filename.txt thành new_filename.txt.
 
 **Đổi tên thư mục:**
 
-    `mv old_foldername/ new_foldername/`
+`mv old_foldername/ new_foldername/`
 
 Lệnh này sẽ đổi tên thư mục từ old_foldername thành new_foldername.
 
 ***Một số tùy chọn khác của lệnh mv bao gồm:***
 
-    ```
-    -i: Hỏi trước khi ghi đè file đích
-    -v: Hiển thị thông tin về quá trình di chuyển
-    -f: Ghi đè file đích mà không cần xác nhận
-    ```
+```
+-i: Hỏi trước khi ghi đè file đích
+-v: Hiển thị thông tin về quá trình di chuyển
+-f: Ghi đè file đích mà không cần xác nhận
+```
 
 **Ví dụ:**
 
-    `mv -i file1.txt file2.txt`
+`mv -i file1.txt file2.txt`
 
 Lệnh này sẽ di chuyển file1.txt thành file2.txt và hỏi trước khi ghi đè nếu file2.txt đã tồn tại.
 
@@ -682,32 +682,34 @@ Lệnh rm (remove) trong Linux/Unix được sử dụng để xóa các tệp t
 
 **Cú pháp cơ bản của lệnh rm như sau:**
 
-    `rm [options] file(s)`
+`rm [options] file(s)`
 
 **Một số options thường dùng của lệnh rm:**
 
-    -i: Yêu cầu xác nhận trước khi xóa mỗi tệp tin.
-    -r (recursive): Xóa thư mục và tất cả nội dung bên trong.
-    -f (force): Xóa mà không cần xác nhận, bỏ qua các lỗi.
-    -v (verbose): Hiển thị thông báo về các tệp tin đang bị xóa.
+```
+-i: Yêu cầu xác nhận trước khi xóa mỗi tệp tin.
+-r (recursive): Xóa thư mục và tất cả nội dung bên trong.
+-f (force): Xóa mà không cần xác nhận, bỏ qua các lỗi.
+-v (verbose): Hiển thị thông báo về các tệp tin đang bị xóa.
+```
 
 ***Ví dụ:***
 
 **Xóa một tệp tin:**
 
-    `rm file.txt`
+`rm file.txt`
 
 **Xóa nhiều tệp tin:**
 
-    `rm file1.txt file2.txt file3.txt`
+`rm file1.txt file2.txt file3.txt`
 
 **Xóa một thư mục và tất cả nội dung bên trong:**
 
-    `rm -r directory/`
+`rm -r directory/`
 
 **Xóa một tệp tin mà không cần xác nhận:**
 
-    `rm -f file.txt`
+`rm -f file.txt`
 
 ***Lưu ý:***
 
@@ -727,13 +729,13 @@ Lệnh `rm` là một công cụ mạnh mẽ nhưng cũng rất nguy hiểm nế
 
 **Liệt kê danh sách file/thư mục:**
 
-    `ls`
+`ls`
 
 Lệnh này sẽ liệt kê tất cả các file và thư mục trong thư mục hiện tại.
 
 **Liệt kê danh sách file/thư mục và thuộc tính:**
 
-    `ls -l`
+`ls -l`
 
 **Lệnh này sẽ liệt kê thông tin chi tiết về các file và thư mục, bao gồm:**
 
@@ -747,34 +749,36 @@ Lệnh này sẽ liệt kê tất cả các file và thư mục trong thư mục
 
 **Show file ẩn:**
 
-    `ls -a`
+`ls -a`
 
 Lệnh này sẽ liệt kê tất cả các file và thư mục, bao gồm cả các file ẩn (bắt đầu bằng dấu chấm ".").
 
 ***Một số tùy chọn khác của lệnh ls:***
 
-    ls -R: Liệt kê đệ quy tất cả các file và thư mục trong thư mục hiện tại và các thư mục con.
-    ls -t: Sắp xếp kết quả theo thời gian sửa đổi mới nhất.
-    ls -S: Sắp xếp kết quả theo kích thước file lớn nhất.
+```
+ls -R: Liệt kê đệ quy tất cả các file và thư mục trong thư mục hiện tại và các thư mục con.
+ls -t: Sắp xếp kết quả theo thời gian sửa đổi mới nhất.
+ls -S: Sắp xếp kết quả theo kích thước file lớn nhất.
+```
 
 **Ví dụ:**
 
-    ```
-    $ ls
-    file1.txt  file2.txt  directory1/
-    ```
+```
+$ ls
+file1.txt  file2.txt  directory1/
+```
 
-    ```
-    $ ls -l
-    -rw-r--r-- 1 user1 user1 100 Aug 5 2023 file1.txt
-    -rw-r--r-- 1 user1 user1 200 Aug 5 2023 file2.txt
-    drwxr-xr-x 2 user1 user1 4096 Aug 5 2023 directory1/
-    ```
+```
+$ ls -l
+-rw-r--r-- 1 user1 user1 100 Aug 5 2023 file1.txt
+-rw-r--r-- 1 user1 user1 200 Aug 5 2023 file2.txt
+drwxr-xr-x 2 user1 user1 4096 Aug 5 2023 directory1/
+```
 
-    ```
-    $ ls -a
-    .  ..  .hidden_file  file1.txt  file2.txt  directory1/
-    ```
+```
+$ ls -a
+.  ..  .hidden_file  file1.txt  file2.txt  directory1/
+```
 
 Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thông tin file/thư mục theo cách mong muốn.
 
@@ -787,7 +791,7 @@ Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thôn
 
 **Phân quyền bằng số:**
 
-    `chmod 755 file.txt`
+`chmod 755 file.txt`
 
 **Giải thích:**
 
@@ -797,7 +801,7 @@ Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thôn
 
 **Phân quyền bằng chữ:**
 
-    chmod u+x,g+rw,o+r file.txt
+`chmod u+x,g+rw,o+r file.txt`
 
 **Giải thích:**
 
@@ -809,20 +813,20 @@ Lệnh ls cung cấp nhiều tùy chọn để liệt kê và hiển thị thôn
 
 `chown`: Thay đổi chủ sở hữu (user) và nhóm (group) của file/thư mục.
 
-    ```
-    chown user:group file.txt
-    chown -R user:group directory/
-    ```
+```
+chown user:group file.txt
+chown -R user:group directory/
+```
 
 `chattr:` Thay đổi các thuộc tính đặc biệt của file/thư mục.
 
 **Set Immutable Attribute (Thuộc tính không thể thay đổi):**
 
-    `chattr +i file.txt`
+`chattr +i file.txt`
 
 **Remove Immutable Attribute:**
 
-    `chattr -i file.txt`
+`chattr -i file.txt`
 
 ***Một số thuộc tính khác của chattr:***
 
@@ -845,7 +849,7 @@ Phân quyền và quản lý quyền truy cập file/thư mục rất quan trọ
 
 **Ví dụ:**
 
-    ln -s /path/to/target /path/to/symlink
+`ln -s /path/to/target /path/to/symlink`
 
 Lệnh trên tạo một symbolic link /path/to/symlink trỏ đến file/thư mục /path/to/target.
 
@@ -855,7 +859,7 @@ Lệnh trên tạo một symbolic link /path/to/symlink trỏ đến file/thư m
 
 **Ví dụ:**
 
-    `ln /path/to/target /path/to/hardlink`
+`ln /path/to/target /path/to/hardlink`
 
 Lệnh trên tạo một hard link /path/to/hardlink trỏ đến cùng inode như /path/to/target.
 
@@ -885,11 +889,11 @@ Lệnh trên tạo một hard link /path/to/hardlink trỏ đến cùng inode nh
 
 **Tạo symbolic link**
 
-    `ln -s /path/to/target /path/to/symlink`
+`ln -s /path/to/target /path/to/symlink`
 
 **Tạo hard link**
 
-    `ln /path/to/target /path/to/hardlink`
+`ln /path/to/target /path/to/hardlink`
 
 Symbolic links và hard links đều có ứng dụng riêng, tuỳ thuộc vào nhu cầu của từng trường hợp cụ thể.
 
@@ -902,24 +906,24 @@ Symbolic links và hard links đều có ứng dụng riêng, tuỳ thuộc vào
 ***1. Lệnh SSH dùng Password:***
 
 **Cú pháp:** 
-    
-    `ssh username@remote_host`
+
+`ssh username@remote_host`
    
 Ví dụ:  
 
-    `ssh huynet@192.168.0.9`
+`ssh huynet@192.168.0.9`
 
 Sau khi chạy lệnh này, bạn sẽ được nhắc nhập **password** của tài khoản username trên máy chủ từ xa remote_host.
    
 **Kết quả:**
    
-   ```
-   huydang@haionet:~$ sudo ssh huynet@192.168.1.9
-   huynet@192.168.1.9's password: 
+```
+huydang@haionet:~$ sudo ssh huynet@192.168.1.9
+huynet@192.168.1.9's password: 
 
-   Last login: Sun Aug  4 19:48:20 2024 from 192.168.1.5
-   huynet@haionet:~$ 
-   ```
+Last login: Sun Aug  4 19:48:20 2024 from 192.168.1.5
+huynet@haionet:~$ 
+```
    
 ***2. Lệnh SSH dùng key:***
 
@@ -927,7 +931,7 @@ Sau khi chạy lệnh này, bạn sẽ được nhắc nhập **password** của
 
 **- Tạo cặp SSH key (public key và private key) trên máy tính của bạn:**
 
-    `ssh-keygen -t rsa -b 4096`
+`ssh-keygen -t rsa -b 4096`
 
 **Thực hiện:**
 
@@ -938,33 +942,33 @@ Lệnh này sẽ tạo ra một cặp key RSA 4096-bit, được lưu trữ mặ
 
 **- Sao chép public key lên máy chủ từ xa:**
 
-    `ssh-copy-id username@remote_host`
+`ssh-copy-id username@remote_host`
 
 or
 
-    `ssh-copy-id -i ~/PATH/id_rsa.pub username@remote_host`
+`ssh-copy-id -i ~/PATH/id_rsa.pub username@remote_host`
 
 **Thực hiện:**
 
-    ```
-    huydang@haionnet:~/ssh$ sudo ssh-copy-id -i /home/huydang/ssh/id_rsa.pub huynet@192.168.1.9                                                                   /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/huydang/ssh/id_rsa.pub"                                                                    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed                                              /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys                                            
-    huynet@192.168.1.9's password:                                                         Number of key(s) added: 1          Now try logging into the machine, with:   `ssh huynet@192.168.1.9` and check to make sure that only the key(s) you wanted were added.
-    ```                                          
+```
+huydang@haionnet:~/ssh$ sudo ssh-copy-id -i /home/huydang/ssh/id_rsa.pub huynet@192.168.1.9                                                                   /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/huydang/ssh/id_rsa.pub"                                                                    /usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed                                              /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys                                            
+huynet@192.168.1.9's password:                                                         Number of key(s) added: 1          Now try logging into the machine, with:   `ssh huynet@192.168.1.9` and check to make sure that only the key(s) you wanted were added.
+```                                          
 
 Lệnh này sẽ sao chép public key của bạn (id_rsa.pub) lên tài khoản username trên máy chủ từ xa remote_host. Sau khi thực hiện xong, public key của bạn sẽ được lưu trữ trong file ~/.ssh/authorized_keys trên máy chủ từ xa.
 
 **- Kết nối đến máy chủ từ xa bằng SSH, sử dụng private key:**
 
-    `ssh -i ~/.ssh/id_rsa username@remote_host`
+`ssh -i ~/.ssh/id_rsa username@remote_host`
 
 **Kết quả:**
    
-    ```
-    huydang@haionet:~/ssh$ sudo ssh -i /home/huydang/ssh/id_rsa huynet@192.168.1.9 
-    
-    Last login: Sun Aug  4 21:32:03 2024 from 192.168.1.5
-    huynet@haionet:~$ 
-    ```
+```
+huydang@haionet:~/ssh$ sudo ssh -i /home/huydang/ssh/id_rsa huynet@192.168.1.9 
+
+Last login: Sun Aug  4 21:32:03 2024 from 192.168.1.5
+huynet@haionet:~$ 
+```
 
 Ở đây, tùy chọn -i cho phép bạn chỉ định đường dẫn đến private key (id_rsa) trên máy tính của bạn. SSH sẽ sử dụng private key này để xác thực với máy chủ từ xa, thay vì yêu cầu bạn nhập mật khẩu.
 
@@ -979,53 +983,53 @@ Cũng giống 2 cách trên, nhưng nếu remote host dùng port khác chẳng h
 
 **Chỉnh sửa file cấu hình SSH /etc/ssh/sshd_config:**
 
-    `sudo nano /etc/ssh/sshd_config`
+`sudo nano /etc/ssh/sshd_config`
 
 **Tìm dòng chứa Port và thay đổi giá trị từ 22 sang 2222:**
 
-    `Port 2222`
+`Port 2222`
 
 Lưu lại và thoát khỏi trình soạn thảo
 
 **Khởi động lại dịch vụ SSH:**
 
-    `sudo systemctl restart sshd`
+`sudo systemctl restart sshd`
 
 
 ***- Mở cổng 2222 trên firewall:***
 
 Tùy thuộc vào loại firewall bạn đang sử dụng, các lệnh để mở port 2222 sẽ khác nhau. Ví dụ với ufw:
 
-    `sudo ufw allow 2222/tcp`
+`sudo ufw allow 2222/tcp`
 
 **Nếu bạn sử dụng firewalld:**
 
-    ```
-    sudo firewall-cmd --permanent --add-port=2222/tcp
-    sudo firewall-cmd --reload
-    ```
+```
+sudo firewall-cmd --permanent --add-port=2222/tcp
+sudo firewall-cmd --reload
+```
 
 **Cú pháp:** 
     
-    `ssh -p 2222 username@remote_host`
+`ssh -p 2222 username@remote_host`
 
 or
 
-    `sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
+`sudo ssh -p 2222 -i /home/huydang/ssh/id_rsa huynet@192.168.1.9`
     
 **Kết quả:**
    
-    ```
-    huydang@haionnet:~$ ssh -p 2222  huynet@192.168.1.9
-    The authenticity of host '[192.168.1.9]:2222 ([192.168.1.9]:2222)' can't be established.
-    ED25519 key fingerprint is SHA256:DuuytTEM/x4tcn61S2B2tj3/+P0mj/aTzyl34DstiE4.
-    This key is not known by any other names.
-    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-    Warning: Permanently added '[192.168.1.9]:2222' (ED25519) to the list of known hosts.
-    huynet@192.168.1.9's password: 
-    Last login: Sun Aug  4 22:04:57 2024 from 192.168.1.5
-    
-    ```
+```
+huydang@haionnet:~$ ssh -p 2222  huynet@192.168.1.9
+The authenticity of host '[192.168.1.9]:2222 ([192.168.1.9]:2222)' can't be established.
+ED25519 key fingerprint is SHA256:DuuytTEM/x4tcn61S2B2tj3/+P0mj/aTzyl34DstiE4.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[192.168.1.9]:2222' (ED25519) to the list of known hosts.
+huynet@192.168.1.9's password: 
+Last login: Sun Aug  4 22:04:57 2024 from 192.168.1.5
+
+```
    
     
 ### 2. scp: Sao chép tệp giữa máy cục bộ và máy chủ từ xa.
@@ -1035,29 +1039,29 @@ or
 
 **Sao chép một file:**
     
-    ```
-    scp file_name user@host:/destination/path
-    ```
+```
+scp file_name user@host:/destination/path
+```
 
 Ví dụ:
 
-    ```
-    scp myfile.txt user@remote_host:/home/user/documents
-    ```
+```
+scp myfile.txt user@remote_host:/home/user/documents
+```
 
 Lệnh này sẽ sao chép file `myfile.txt` từ máy hiện tại đến thư mục `/home/user/documents` trên máy `remote_host`.
 
 **Sao chép một thư mục:**
 
-    ```
-    scp -r directory_name user@host:/destination/path
-    ```
+```
+scp -r directory_name user@host:/destination/path
+```
 
 Ví dụ:
 
-    ```
-    scp -r my_folder user@remote_host:/home/user/backup
-    ```
+```
+scp -r my_folder user@remote_host:/home/user/backup
+```
 
 Lệnh này sẽ sao chép thư mục `my_folder` (và toàn bộ nội dung bên trong) từ máy hiện tại đến thư mục `/home/user/backup` trên máy `remote_host`.
 
@@ -1078,54 +1082,54 @@ Lệnh này sẽ sao chép thư mục `my_folder` (và toàn bộ nội dung bê
 
 **Sao chép một file:**
 
-    ```
-    rsync file_name user@host:/destination/path
-    ```
+```
+rsync file_name user@host:/destination/path
+```
 
 **Ví dụ:**
 
-    ```
-    rsync myfile.txt user@remote_host:/home/user/documents
-    ```
+```
+rsync myfile.txt user@remote_host:/home/user/documents
+```
 
 Lệnh này sẽ sao chép file `myfile.txt` từ máy hiện tại đến thư mục `/home/user/documents` trên máy `remote_host`.
 
 **Sao chép một thư mục:**
 
-    ```
-    rsync -r directory_name user@host:/destination/path
-    ```
+```
+rsync -r directory_name user@host:/destination/path
+```
 
 **Ví dụ:**
 
-    ```
-    rsync -r my_folder user@remote_host:/home/user/backup
-    ```
+```
+rsync -r my_folder user@remote_host:/home/user/backup
+```
 
 Lệnh này sẽ sao chép thư mục `my_folder` (và toàn bộ nội dung bên trong) từ máy hiện tại đến thư mục `/home/user/backup` trên máy `remote_host`.
 
 **Sao chép dincremental (chỉ sao chép những file thay đổi):**
 
-    ```
-    rsync -avz --delete source_dir user@host:destination_dir
-    ```
+```
+rsync -avz --delete source_dir user@host:destination_dir
+```
 
 **Ví dụ:**
 
-    ```
-    rsync -avz --delete /home/user/documents user@remote_host:/home/user/backup
-    ```
+```
+rsync -avz --delete /home/user/documents user@remote_host:/home/user/backup
+```
 
 Lệnh này sẽ sao chép chỉ những file thay đổi trong thư mục `documents` trên máy hiện tại đến thư mục `backup` trên máy `remote_host`. Tham số `--delete` sẽ xóa các file ở đích nếu không còn tồn tại ở nguồn.
 
 ***Một số tùy chọn thường dùng của `rsync`:***
 
-    ```
-    - `-a`: archive mode, bảo toàn các thuộc tính của file/thư mục
-    - `-v`: verbose, hiển thị tiến trình sao chép
-    - `-z`: nén dữ liệu để truyền nhanh hơn
-    - `--delete`: xóa các file/thư mục ở đích nếu không còn ở nguồn
-    ```
+```
+- `-a`: archive mode, bảo toàn các thuộc tính của file/thư mục
+- `-v`: verbose, hiển thị tiến trình sao chép
+- `-z`: nén dữ liệu để truyền nhanh hơn
+- `--delete`: xóa các file/thư mục ở đích nếu không còn ở nguồn
+```
 
  
 ### 4. tar, zip, unzip: Nén và giải nén tệp.
@@ -1137,53 +1141,53 @@ Trong Linux/Unix, có 3 lệnh phổ biến dùng để nén và giải nén fil
    
 **- Nén file/thư mục vào file `.tar.gz` (Gzip compressed tar archive):**
      
-     ```
-     tar -czf output_file.tar.gz input_file_or_directory
-     ```
+ ```
+ tar -czf output_file.tar.gz input_file_or_directory
+ ```
      
 **Ví dụ:**
      
-     ```
-     tar -czf my_files.tar.gz documents/ photos/
-     ```
+ ```
+ tar -czf my_files.tar.gz documents/ photos/
+ ```
      
 **- Giải nén file `.tar.gz`:**
      
-     ```
-     tar -xzf input_file.tar.gz
-     ```
+ ```
+ tar -xzf input_file.tar.gz
+ ```
      
 **Ví dụ:**
 
-     ```
-     tar -xzf my_files.tar.gz
-     ```
+ ```
+ tar -xzf my_files.tar.gz
+ ```
 
 2. **zip**:
    
 **- Nén file/thư mục vào file `.zip`:**
 
-     ```
-     zip -r output_file.zip input_file_or_directory
-     ```
+ ```
+ zip -r output_file.zip input_file_or_directory
+ ```
 
 **Ví dụ:**
 
-     ```
-     zip -r my_files.zip documents/ photos/
-     ```
+ ```
+ zip -r my_files.zip documents/ photos/
+ ```
 
 **- Giải nén file `.zip`:**
 
-     ```
-     unzip input_file.zip
-     ```
+ ```
+ unzip input_file.zip
+ ```
 
 **Ví dụ:**
 
-     ```
-     unzip my_files.zip
-     ```
+ ```
+ unzip my_files.zip
+ ```
 
 ***Các tùy chọn thường dùng:***
 
@@ -1218,47 +1222,47 @@ Trong Linux/Unix, có 3 lệnh phổ biến dùng để nén và giải nén fil
      
 - Đầu tiên, bạn cần phải tạo phân vùng và định dạng filesystem trên ổ `sdb`:
 
-     ```
-     # Tạo phân vùng
-     fdisk /dev/sdb
-     
-     # Định dạng filesystem (ví dụ ext4)
-     mkfs.ext4 /dev/sdb1
-     ```
+ ```
+ # Tạo phân vùng
+ fdisk /dev/sdb
+ 
+ # Định dạng filesystem (ví dụ ext4)
+ mkfs.ext4 /dev/sdb1
+ ```
 
 2. **Kiểm tra số lượng ổ cứng trên máy chủ:**
 
-   ```
-   # Liệt kê tất cả các ổ cứng đã được gắn
-   lsblk
-   ```
+```
+# Liệt kê tất cả các ổ cứng đã được gắn
+lsblk
+```
    
    Kết quả sẽ hiển thị danh sách các ổ cứng, chẳng hạn:
-   
-   ```
-   NAME   SIZE TYPE MOUNTPOINT
-   sda    100G Disk 
-   ├─sda1  50G Part /
-   └─sda2  50G Part [SWAP]
-   sdb     5G Disk
-   ```
+
+```
+NAME   SIZE TYPE MOUNTPOINT
+sda    100G Disk 
+├─sda1  50G Part /
+└─sda2  50G Part [SWAP]
+sdb     5G Disk
+```
 
 3. **Mount ổ cứng `/dev/sdb1` vào `/mnt/test`:**
 
-   ```
-   # Tạo thư mục mount point
-   mkdir /mnt/test
-   
-   # Mount ổ cứng
-   mount /dev/sdb1 /mnt/test
-   ```
+```
+# Tạo thư mục mount point
+mkdir /mnt/test
+
+# Mount ổ cứng
+mount /dev/sdb1 /mnt/test
+```
 
 4. **Unmount ổ cứng `/mnt/test`:**
 
-   ```
-   # Unmount ổ cứng
-   umount /mnt/test
-   ```
+```
+# Unmount ổ cứng
+umount /mnt/test
+```
 
 Các lưu ý:
 
@@ -1284,13 +1288,13 @@ Sau khi mount, bạn có thể sử dụng ổ cứng `/dev/sdb1` như một th�
 
 **Không sử dụng -i**
 
-    `sed 's/old/new/g' file.txt`
+`sed 's/old/new/g' file.txt`
 
 **Kết quả sẽ in ra màn hình, file gốc không bị thay đổi**
 
 **Sử dụng -i**
 
-    `sed -i 's/old/new/g' file.txt`
+`sed -i 's/old/new/g' file.txt`
 
 **Nội dung file.txt sẽ được thay đổi trực tiếp**
 
@@ -1305,25 +1309,25 @@ Lệnh sort trong Unix/Linux được sử dụng để sắp xếp dữ liệu 
 
 **Sắp xếp theo thứ tự tăng dần:**
 
-    `sort file.txt`
+`sort file.txt`
 
 Lệnh này sẽ sắp xếp các dòng trong file file.txt theo thứ tự tăng dần.
 
 **Sắp xếp theo thứ tự giảm dần:**
 
-    `sort -r file.txt`
+`sort -r file.txt`
 
 Lệnh này sẽ sắp xếp các dòng trong file file.txt theo thứ tự giảm dần.
 
 **Sắp xếp theo cột:**
 
-    `sort -k [column_number] file.txt`
+`sort -k [column_number] file.txt`
 
 Lệnh này sẽ sắp xếp các dòng trong file file.txt theo cột chỉ định, với [column_number] là số thứ tự của cột (bắt đầu từ 1).
 
 **Ví dụ:**
 
-    sort -k 2 file.txt
+sort -k 2 file.txt
 
 Lệnh này sẽ sắp xếp các dòng trong file file.txt theo cột thứ 2.
 
@@ -1336,7 +1340,7 @@ Lệnh này sẽ sắp xếp các dòng trong file file.txt theo cột thứ 2.
 
 **Ví dụ:**
 
-    `sort -k 2 -n file.txt`
+`sort -k 2 -n file.txt`
 
 Lệnh này sẽ sắp xếp các dòng trong file file.txt theo cột thứ 2, theo thứ tự tăng dần và xem các giá trị trong cột đó là số.
 
@@ -1347,13 +1351,13 @@ Lệnh `uniq` trong Unix/Linux được sử dụng để lọc ra các dòng l�
 
 **Lọc ra các dòng lặp lại trong một file:**
 
-    `uniq file.txt`
+`uniq file.txt`
 
 Lệnh này sẽ in ra các dòng duy nhất, loại bỏ các dòng trùng lặp.
 
 **Lọc ra các dòng lặp lại trong file và đếm số lượng các dòng lặp lại:**
 
-    `uniq -c file.txt`
+`uniq -c file.txt`
 
 Lệnh này sẽ in ra các dòng duy nhất, và đếm số lần xuất hiện của mỗi dòng.
 
@@ -1371,7 +1375,7 @@ Lệnh này sẽ in ra các dòng duy nhất, và đếm số lần xuất hiệ
 
 **Ví dụ:**
 
-    `uniq -c -i file.txt`
+`uniq -c -i file.txt`
 
 Lệnh này sẽ lọc ra các dòng lặp lại trong file file.txt, không phân biệt chữ hoa/chữ thường, và đếm số lượng các dòng lặp lại.
 
@@ -1382,13 +1386,13 @@ Lệnh `wc` (Word Count) trong Unix/Linux được sử dụng để đếm số
 
 **Đếm số dòng trong file:**
 
-    `wc -l file.txt`
+`wc -l file.txt`
 
 Lệnh này sẽ in ra số dòng trong file file.txt.
 
 **Đếm số ký tự trong file:**
 
-    `wc -c file.txt`
+`wc -c file.txt`
 
 Lệnh này sẽ in ra số ký tự trong file file.txt.
 
@@ -1400,7 +1404,7 @@ Lệnh này sẽ in ra số ký tự trong file file.txt.
 
 **Ví dụ:**
 
-    `wc -l -c file.txt`
+`wc -l -c file.txt`
 
 Lệnh này sẽ in ra cả số dòng và số ký tự trong file file.txt.
 
@@ -1417,25 +1421,25 @@ Lệnh `cut` trong Unix/Linux được sử dụng để trích xuất các ph�
 
 **Trích xuất kí tự thứ n trong một chuỗi:**
 
-    `cut -c n file.txt`
+`cut -c n file.txt`
 
 Lệnh này sẽ trích xuất kí tự thứ n từ mỗi dòng trong file file.txt.
 
 **Trích xuất từ kí tự thứ n trở về sau:**
 
-    `cut -c n- file.txt`
+`cut -c n- file.txt`
 
 Lệnh này sẽ trích xuất từ kí tự thứ n đến cuối mỗi dòng trong file file.txt.
 
 **Trích xuất từ kí tự thứ n trở về trước:**
 
-    `cut -c -n file.txt`
+`cut -c -n file.txt`
     
 Lệnh này sẽ trích xuất từ đầu mỗi dòng đến kí tự thứ n trong file file.txt.
 
 **Ngoài ra, bạn cũng có thể sử dụng lệnh cut để trích xuất các trường dữ liệu theo dấu phân cách (như dấu phẩy, tab, v.v.):**
 
-    `cut -d',' -f2,4 file.csv`
+`cut -d',' -f2,4 file.csv`
 
 Lệnh này sẽ trích xuất trường thứ 2 và 4 (tính từ 1) từ mỗi dòng trong file file.csv, sử dụng dấu phẩy (,) làm dấu phân cách.
 
@@ -1461,16 +1465,16 @@ Lệnh `traceroute` (hoặc tracert trên Windows) là một công cụ hữu í
 
 **Ví dụ kết quả traceroute:**
 
-    ```
-    traceroute to example.com (93.184.216.34), 30 hops max, 60 byte packets
-     1  192.168.1.1 (192.168.1.1)  1.234 ms  2.345 ms  1.567 ms
-     2  10.0.0.1 (10.0.0.1)  5.678 ms  4.321 ms  6.789 ms
-     3  192.168.0.1 (192.168.0.1)  10.012 ms  9.876 ms  11.234 ms
-     4  192.168.2.1 (192.168.2.1)  12.345 ms  13.456 ms  14.567 ms
-     5  example-router.isp.net (172.16.0.1)  15.678 ms  16.789 ms  17.012 ms
-     6  example-border-router.isp.net (192.168.3.1)  18.345 ms  19.456 ms  20.567 ms
-     7  example.com (93.184.216.34)  21.678 ms  22.789 ms  23.012 ms
-    ```
+```
+traceroute to example.com (93.184.216.34), 30 hops max, 60 byte packets
+ 1  192.168.1.1 (192.168.1.1)  1.234 ms  2.345 ms  1.567 ms
+ 2  10.0.0.1 (10.0.0.1)  5.678 ms  4.321 ms  6.789 ms
+ 3  192.168.0.1 (192.168.0.1)  10.012 ms  9.876 ms  11.234 ms
+ 4  192.168.2.1 (192.168.2.1)  12.345 ms  13.456 ms  14.567 ms
+ 5  example-router.isp.net (172.16.0.1)  15.678 ms  16.789 ms  17.012 ms
+ 6  example-border-router.isp.net (192.168.3.1)  18.345 ms  19.456 ms  20.567 ms
+ 7  example.com (93.184.216.34)  21.678 ms  22.789 ms  23.012 ms
+```
 
 **Giải thích kết quả:**
 
@@ -1488,21 +1492,21 @@ Lệnh `dig` (Domain Information Groper) trong Unix/Linux được sử dụng �
 
 **Kiểm tra record A, MX, NS:**
 
-    ```
-    dig example.com A
-    dig example.com MX
-    dig example.com NS
-    ```
+```
+dig example.com A
+dig example.com MX
+dig example.com NS
+```
 
 Các lệnh trên sẽ truy vấn và hiển thị các record A (địa chỉ IP), MX (mail server) và NS (name server) của domain example.com.
 
 **Kiểm tra record A, MX, NS với custom DNS:**
     
-    ```
-    dig @8.8.8.8 example.com A
-    dig @8.8.8.8 example.com MX
-    dig @8.8.8.8 example.com NS
-    ```
+```
+dig @8.8.8.8 example.com A
+dig @8.8.8.8 example.com MX
+dig @8.8.8.8 example.com NS
+```
 
 Các lệnh trên sẽ sử dụng DNS server 8.8.8.8 (Google DNS) để truy vấn các record của domain example.com.
 
@@ -1516,12 +1520,12 @@ Các lệnh trên sẽ sử dụng DNS server 8.8.8.8 (Google DNS) để truy v�
 
 **Ví dụ:**
 
-    ```
-    dig -t CNAME example.com
-    dig -x 8.8.8.8
-    dig @8.8.8.8 -p 5353 example.com
-    dig -f domains.txt
-    ```
+```
+dig -t CNAME example.com
+dig -x 8.8.8.8
+dig @8.8.8.8 -p 5353 example.com
+dig -f domains.txt
+```
 
 Lệnh `dig` là một công cụ rất hữu ích để kiểm tra và debug các vấn đề liên quan đến DNS.
 
