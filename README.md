@@ -17,7 +17,7 @@
     
 ### 1. Ping/hping3: Kiểm tra kết nối mạng.
 
-Lệnh `ping vietnix.vn` 
+Lệnh `ping` 
     
 **Kết quả:**
 
@@ -38,10 +38,66 @@ Lệnh `ping vietnix.vn`
 
 - `time=3.78 ms`: Đây là thời gian phản hồi, tức là thời gian gói tin ***ICMP echo reply*** đi từ máy tính nhận trở về. Trong TH này thời gian phản hồi là 3.78 ms.
 
+
+> `ping -c 10  8.8.8.8`: ping theo gói.
+> 
 > Tương tự với lệnh `hping3 --icmp vietnix.vn`
 
-`ping -c 10  8.8.8.8`: ping theo gói.
+Lệnh `hping3` 
 
+**Định nghĩa:** 
+
+- Là công cụ quét mạng và máy phân tích cho giao thức TCP/IP được phân phối bởi Salvatore Sanfilip(còn được gọi là Antirez).
+
+- Nó là một loại công cụ thử nghiệm cho an ninh mạng.
+
+- Công cụ quét mạng hping là một bộ phân tích gói tin TCP/IP theo hướng dòng lệnh. Giao diện được lấy cảm hứng từ lệnh ping(8) Unix, nhưng hping không chỉ có thể gửi các yêu cầu echo ICMP. Nó hỗ trợ giao thức TCP, UDP, ICMP và RAW-IP, có chế độ traceroute, khả năng gửi tập tin giữa một kênh được bảo vệ và nhiều tính năng khác.
+
+**Chức năng:**
+
+- Kiểm tra tường lửa, quy tắc tường lửa.
+
+- Quét cổng nâng cao.
+
+- Thử nghiệm mạng, sử dụng các giao thức khác nhau, TOS, Phân mảnh.
+
+- Manual path MTU discovery.
+
+- Traceroute nâng cao trong tất cả các giao thức được hỗ trợ.
+
+- Quét dấu vân tay từ xa.
+
+- Đoán thời gian hoạt động từ xa
+
+- TCP/IP stacks auditing
+
+- hping cũng có thể hữu ích cho sinh viên đang học  TCP/IP
+
+- Kiểm tra IDS.
+
+**Cách sử dụng:**
+
+`hping3 -h`
+
+![image](https://github.com/user-attachments/assets/962843b1-a8cf-439f-9b5d-7158cd2ca069)
+
+1. Base options
+
+   - `-c --count`: dừng lại sau khi đã count response packets.
+   
+   - `-i -- interval`: Chỉ rõ khoảng thời gian tính bằng giây hoặc ms giữa những lần gửi packet.
+   -
+   
+
+3. Protocol selection
+
+4. IP Related Options
+
+5. ICMP Related Options
+
+6. TCP/UDP Related options
+
+7. Common Options
 
 
 ### 2. Netstat: Hiển thị thông tin về các kết nối mạng.
