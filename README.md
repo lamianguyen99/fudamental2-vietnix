@@ -784,54 +784,7 @@ Lệnh này sẽ di chuyển file1.txt thành file2.txt và hỏi trước khi g
 Lệnh mv là một công cụ rất hữu ích khi cần di chuyển hoặc đổi tên file và thư mục trong hệ thống tập tin.
 
 
-### 7. rm: Xóa tệp.
-
-
-Lệnh rm (remove) trong Linux/Unix được sử dụng để xóa các tệp tin và thư mục.
-
-**Cú pháp cơ bản của lệnh rm như sau:**
-
-`rm [options] file(s)`
-
-**Một số options thường dùng của lệnh rm:**
-
-```
--i: Yêu cầu xác nhận trước khi xóa mỗi tệp tin.
--r (recursive): Xóa thư mục và tất cả nội dung bên trong.
--f (force): Xóa mà không cần xác nhận, bỏ qua các lỗi.
--v (verbose): Hiển thị thông báo về các tệp tin đang bị xóa.
-```
-
-***Ví dụ:***
-
-**Xóa một tệp tin:**
-
-`rm file.txt`
-
-**Xóa nhiều tệp tin:**
-
-`rm file1.txt file2.txt file3.txt`
-
-**Xóa một thư mục và tất cả nội dung bên trong:**
-
-`rm -r directory/`
-
-**Xóa một tệp tin mà không cần xác nhận:**
-
-`rm -f file.txt`
-
-***Lưu ý:***
-
-- Khi sử dụng lệnh rm, bạn cần rất cẩn thận vì các tệp tin/thư mục bị xóa sẽ không thể khôi phục.
-
-- Có thể sử dụng lệnh rm -i để yêu cầu xác nhận trước khi xóa từng tệp tin/thư mục.
-
-- Lệnh rmdir có thể dùng để xóa các thư mục trống.
-
-Lệnh `rm` là một công cụ mạnh mẽ nhưng cũng rất nguy hiểm nếu sử dụng không cẩn thận, do đó cần sử dụng với sự thận trọng.
-
-
-### 8. ls: Liệt kê các tệp và thư mục.
+### 7. ls: Liệt kê các tệp và thư mục.
 
 
 `ls` (list) là lệnh dùng để liệt kê danh sách các file và thư mục trong Unix/Linux.
